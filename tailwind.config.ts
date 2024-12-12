@@ -8,9 +8,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        outfit: ["var(--font-outfit)", "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#FF131D",
+        white: "#FFFFFF",
+        black: "#000000",
+        sectionBg: "rgba(246, 246, 246, 0.8)",
       },
     },
   },
