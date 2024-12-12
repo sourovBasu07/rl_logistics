@@ -4,6 +4,7 @@ import Explore from "@/components/homepage/Explore";
 import Hero from "@/components/homepage/Hero";
 import HowItWorks from "@/components/homepage/HowItWorks";
 import Industries from "@/components/homepage/Industries";
+import DeliveryProcess from "@/components/services/DeliveryProcess";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <HowItWorks />
       <Industries />
       <AboutCompany />
+      <DeliveryProcess />
       <Cta />
     </div>
   );

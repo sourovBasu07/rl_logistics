@@ -139,3 +139,54 @@ export const topbarDetails = [
     icon: "/icons/message_icon.svg",
   },
 ];
+
+export const servicesData = [
+  {
+    title: "Air Transportation",
+    image: "/images/plane.jpeg",
+    icon: "/icons/transportation_icon.png",
+    description:
+      "Transmax the world’s driving more as worldwide coordinations supplier we exchange the any as more rady worldwide",
+  },
+  {
+    title: "Ship Transportation",
+    image: "/images/ship.jpeg",
+    icon: "/icons/transportation_icon.png",
+    description:
+      "Transmax the world’s driving more as worldwide coordinations supplier we exchange the any as more rady worldwide",
+  },
+  {
+    title: "Road Transportation",
+    image: "/images/truck.jpeg",
+    icon: "/icons/transportation_icon.png",
+    description:
+      "Transmax the world’s driving more as worldwide coordinations supplier we exchange the any as more rady worldwide",
+  },
+];
+
+export const parcelDeliveryProcessData = [
+  {
+    title: "Parcel Register",
+    description:
+      "Said moved fruits are unto forth years the brought kind herbs for under forty with may crepath delisa.",
+    icon: "/icons/parcel_register_icon.png",
+  },
+  {
+    title: "Parcel Loading",
+    description:
+      "Said moved fruits are unto forth years the brought kind herbs for under ",
+    icon: "/icons/parcel_loading_icon.png",
+  },
+  {
+    title: "Parcel In-Transit",
+    description:
+      "Said moved fruits are unto forth years the brought kind herbs for under forty with may crepath delisa.",
+    icon: "/icons/parcel_intransit_icon.png",
+  },
+  {
+    title: "Parcel Delivery",
+    description:
+      "Said moved fruits are unto forth years the brought kind herbs for under forty ",
+    icon: "/icons/parcel_delivery_icon.png",
+  },
+];
