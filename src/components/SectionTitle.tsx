@@ -11,7 +11,7 @@ const SectionTitle = ({
 }) => {
   return (
     <div
-      className={`w-[600px] flex flex-col ${
+      className={`w-[625px] flex flex-col ${
         center ? "items-center" : ""
       } gap-6`}
     >

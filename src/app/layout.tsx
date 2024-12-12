@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/navbar/TopBar";
 import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -27,6 +28,7 @@ export default function RootLayout({
         <TopBar />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
