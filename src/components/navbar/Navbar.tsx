@@ -26,7 +26,7 @@ const Navbar = () => {
       const activeRect = activeLink.getBoundingClientRect();
 
       setActivePosition({
-        // @ts-ignore
+        // @ts-expect-error undefined
         left: activeRect.left - parentRect.left,
         width: activeRect.width,
         title: activeLink.textContent || "",
