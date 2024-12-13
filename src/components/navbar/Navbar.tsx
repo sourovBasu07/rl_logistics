@@ -26,6 +26,7 @@ const Navbar = () => {
       const activeRect = activeLink.getBoundingClientRect();
 
       setActivePosition({
+        // @ts-ignore
         left: activeRect.left - parentRect.left,
         width: activeRect.width,
         title: activeLink.textContent || "",

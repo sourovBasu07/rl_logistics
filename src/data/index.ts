@@ -82,7 +82,7 @@ export const stats = [
   },
   {
     title: "Satisfied clients",
-    count: "2k+",
+    count: 2,
   },
 ];
 
