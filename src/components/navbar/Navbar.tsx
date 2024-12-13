@@ -119,8 +119,12 @@ const Navbar = () => {
               height={5}
             />
           </div>
-          <Button style="outline" text="Book Now" />
-          <Button text="Track Order" />
+          <Link href="/book-now">
+            <Button style="outline" text="Book Now" />
+          </Link>
+          <Link href="/track-order">
+            <Button text="Track Order" />
+          </Link>
         </div>
       </div>
     </div>

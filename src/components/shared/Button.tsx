@@ -36,7 +36,7 @@ const Button = ({
       className={`${styles[style]} ${sizes[size]} flex items-center gap-2 duration-700 cursor-pointer`}
     >
       {icon && <Image src={icon} alt="Icon" width={20} height={20} />}
-      <button type={type} className={``} onClick={onClick}>
+      <button type={type} className="whitespace-nowrap" onClick={onClick}>
         {text}
       </button>
     </div>
