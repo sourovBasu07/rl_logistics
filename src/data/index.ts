@@ -190,3 +190,92 @@ export const parcelDeliveryProcessData = [
     icon: "/icons/parcel_delivery_icon.png",
   },
 ];
+
+export const whyChooseUsData = [
+  {
+    title: "Get Compensation",
+    description: "Several thousands of dollars",
+    icon: "/icons/compensation_icon.png",
+  },
+  {
+    title: "No Spend Your Time",
+    description: "Several thousands of dollars",
+    icon: "/icons/clock_icon.png",
+  },
+  {
+    title: "Perfect Results",
+    description: "Several thousands of dollars",
+    icon: "/icons/results_icon.png",
+  },
+];
+
+export const teamMembers = [
+  {
+    name: "Wei Zhang",
+    title: "Managing Director ",
+    image: "/images/profile_1.jpeg",
+  },
+  {
+    name: "Mei Chen",
+    title: "Warehouse Controller",
+    image: "/images/profile_02.jpeg",
+  },
+  {
+    name: "Ming Li",
+    title: "Warehouse Manager",
+    image: "/images/profile_3.jpeg",
+  },
+  {
+    name: "Li Wang",
+    title: "Product Manager",
+    image: "/images/profile_4.jpeg",
+  },
+];
+
+export const blogPosts = [
+  {
+    title:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    image: "/images/blog_1.jpeg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    date: "11 July 2024",
+    comment: "No Comment",
+  },
+  {
+    title:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    image: "/images/blog_2.jpeg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    date: "11 July 2024",
+    comment: "No Comment",
+  },
+  {
+    title:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    image: "/images/blog_3.jpeg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    date: "11 July 2024",
+    comment: "No Comment",
+  },
+  {
+    title:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    image: "/images/blog_4.jpeg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    date: "11 July 2024",
+    comment: "No Comment",
+  },
+  {
+    title:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    image: "/images/blog_5.jpeg",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    date: "11 July 2024",
+    comment: "No Comment",
+  },
+];

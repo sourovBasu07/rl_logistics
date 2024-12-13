@@ -3,17 +3,19 @@ const SectionTitle = ({
   title,
   description,
   center = false,
+  className,
 }: {
   name: string;
   title: string;
-  description: string;
+  description?: string;
   center?: boolean;
+  className?: string;
 }) => {
   return (
     <div
       className={`w-[625px] flex flex-col ${
         center ? "items-center" : ""
-      } gap-6`}
+      } gap-6 ${className}`}
     >
       <div className={`flex flex-col ${center ? "items-center" : ""} gap-4`}>
         <div className="flex items-center gap-3">

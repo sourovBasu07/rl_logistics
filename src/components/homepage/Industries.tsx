@@ -6,14 +6,14 @@ const Industries = () => {
   return (
     <section className="container flex flex-col gap-9 pb-24">
       <div className="flex items-center gap-20">
-        <div className="w-[500px] h-[250px]">
+        <div className="w-[500px] h-[250px] rounded-md">
           <Image
             src="/images/manage_works.jpeg"
             alt="Manage works"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-md"
           />
         </div>
         <SectionTitle
@@ -45,14 +45,14 @@ const Industries = () => {
             ))}
           </div>
         </div>
-        <div className="w-[500px] h-[210px]">
+        <div className="w-[500px] h-[210px] rounded-md">
           <Image
             src="/images/industry_image.jpeg"
             alt="Manage works"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-md"
           />
         </div>
       </div>

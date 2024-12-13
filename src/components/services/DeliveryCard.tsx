@@ -19,6 +19,7 @@ const DeliveryCard = ({
       }`}
     >
       {/* Dashed Line */}
+
       {index !== 3 && (
         <div
           className={`absolute top-1/2 left-1/2 w-full h-[2px] border-t-2 border-dashed border-red-500 translate-x-[30px] -translate-y-[52px] origin-left ${
@@ -28,7 +29,7 @@ const DeliveryCard = ({
       )}
 
       {/* Circle */}
-      <div className="z-10 w-[8.875rem] h-[8.875rem] flex items-center justify-center text-red-500 font-bold text-lg border-2 border-red-500 rounded-full bg-white">
+      <div className="relative z-10 w-[8.875rem] h-[8.875rem] flex items-center justify-center text-red-500 font-bold text-lg border-2 border-red-500 rounded-full bg-white">
         <Image
           src={icon}
           alt={title}
@@ -37,6 +38,9 @@ const DeliveryCard = ({
           sizes="100vw"
           className={`w-auto ${index === 2 ? "h-[3.125rem]" : "h-[3.75rem]"}`}
         />
+        <div className="absolute top-[2rem] -right-5 w-10 h-10 flex justify-center items-center bg-primary rounded-full rotate-3">
+          <p className="text-white">{index + 1}</p>
+        </div>
       </div>
 
       {/* Title and Description */}
