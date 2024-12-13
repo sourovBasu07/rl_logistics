@@ -279,3 +279,36 @@ export const blogPosts = [
     comment: "No Comment",
   },
 ];
+
+export const faqs = [
+  {
+    question: "Bring their individual experience and creative",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam. Risus rutrum tellus is eget ultrices many pretium nisi amet facilisis. Augue eu vulputate tortor egestas cursus vivamus. that any Commodo iaculis eget massa phasellus ultrices nunc dignissim.",
+  },
+  {
+    question: "Human centered design to challenges",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam. Risus rutrum tellus is eget ultrices many pretium nisi amet facilisis. Augue eu vulputate tortor egestas cursus vivamus. that any Commodo iaculis eget massa phasellus ultrices nunc dignissim.",
+  },
+  {
+    question: "Which technical skills would you improve?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam. Risus rutrum tellus is eget ultrices many pretium nisi amet facilisis. Augue eu vulputate tortor egestas cursus vivamus. that any Commodo iaculis eget massa phasellus ultrices nunc dignissim.",
+  },
+  {
+    question: "I'm a total beginner. Can I still follow along?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam. Risus rutrum tellus is eget ultrices many pretium nisi amet facilisis. Augue eu vulputate tortor egestas cursus vivamus. that any Commodo iaculis eget massa phasellus ultrices nunc dignissim.",
+  },
+  {
+    question: "How to divide a widget area section into columns?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam. Risus rutrum tellus is eget ultrices many pretium nisi amet facilisis. Augue eu vulputate tortor egestas cursus vivamus. that any Commodo iaculis eget massa phasellus ultrices nunc dignissim.",
+  },
+  {
+    question: "What options for logistics plans are available?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam. Risus rutrum tellus is eget ultrices many pretium nisi amet facilisis. Augue eu vulputate tortor egestas cursus vivamus. that any Commodo iaculis eget massa phasellus ultrices nunc dignissim.",
+  },
+];
