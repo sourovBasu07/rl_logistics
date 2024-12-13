@@ -1,3 +1,12 @@
+import {
+  ClockIcon,
+  CompensationIcon,
+  PlaneIcon,
+  ResultsIcon,
+  TrainIcon,
+  TruckIcon,
+} from "@/assets";
+
 export const navbarOptions = [
   {
     title: "Home",
@@ -24,17 +33,17 @@ export const navbarOptions = [
 export const transaportCardDetails = [
   {
     title: "Air Transport",
-    image: "/images/air_transport.png",
+    image: "/images/plane.jpeg",
     country: "China",
   },
   {
     title: "Ship Transport",
-    image: "/images/ship_transport.png",
+    image: "/images/ship.jpeg",
     country: "India",
   },
   {
     title: "Road Transport",
-    image: "/images/road_transport.png",
+    image: "/images/truck.jpeg",
     country: "Bangladesh",
   },
 ];
@@ -42,19 +51,19 @@ export const transaportCardDetails = [
 export const deliveryProcessData = [
   {
     title: "Global Sustainability Market Leader",
-    icon: "/icons/plane_icon.png",
+    Icon: PlaneIcon,
     description:
       "Transmax the world’s driving more as worldwide coordinations supplier we exchange the any as more rady worldwide",
   },
   {
     title: "Relentless Productivity Driver",
-    icon: "/icons/train_icon.png",
+    Icon: TrainIcon,
     description:
       "Transmax the world’s driving more as worldwide coordinations supplier we exchange the any as more rady worldwide",
   },
   {
     title: "Proud to deliver excellence Every time",
-    icon: "/icons/truck_icon.png",
+    Icon: TruckIcon,
     description:
       "Transmax the world’s driving more as worldwide coordinations supplier we exchange the any as more rady worldwide",
   },
@@ -195,17 +204,17 @@ export const whyChooseUsData = [
   {
     title: "Get Compensation",
     description: "Several thousands of dollars",
-    icon: "/icons/compensation_icon.png",
+    Icon: CompensationIcon,
   },
   {
     title: "No Spend Your Time",
     description: "Several thousands of dollars",
-    icon: "/icons/clock_icon.png",
+    Icon: ClockIcon,
   },
   {
     title: "Perfect Results",
     description: "Several thousands of dollars",
-    icon: "/icons/results_icon.png",
+    Icon: ResultsIcon,
   },
 ];
 

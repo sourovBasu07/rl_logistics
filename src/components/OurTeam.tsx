@@ -47,7 +47,8 @@ const TeamCard = ({
           />
         </div>
       </div>
-      <div className="absolute -bottom-7 w-[80%] ml-[10%] bg-white rounded-md text-center py-2">
+      <div className="absolute inset-0 w-full h-full rounded-[0.375rem] duration-500 group-hover:bg-black/30" />
+      <div className="absolute -bottom-7 w-[80%] ml-[10%] bg-white rounded-md text-center py-2 duration-500 group-hover:-translate-y-5">
         <p className="font-semibold text-black">{name}</p>
         <p className="text-xs text-[#535353]">{title}</p>
       </div>

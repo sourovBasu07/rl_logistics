@@ -8,31 +8,31 @@ type CardProps = {
   country?: string;
 };
 
-const Card = ({ title, image }: CardProps) => {
+const Card = ({ title, image, country }: CardProps) => {
   return (
-    <div className="">
-      <div className="relative w-[240px] h-[360px] rounded-[0.375rem]">
+    <div className="relative w-full h-[360px] group">
+      <div className="relative h-full rounded-[0.375rem]">
         <Image
           src={image}
           alt={title}
           width={0}
           height={0}
-          fill
           sizes="100vw"
           className="w-full h-full rounded-[0.375rem] object-cover"
         />
-        {/* <div className="absolute">
-          <p className="">{title}</p>
+        <div className="absolute inset-0 w-full h-full rounded-[0.375rem] duration-500 group-hover:bg-black/30" />
+        <div className="absolute left-5 bottom-5 duration-500 group-hover:-translate-y-5">
+          <p className="font-semibold text-[1.375rem] text-white">{title}</p>
           <div className="flex items-center gap-[0.375rem]">
             <Image
-              src="/icons/location_icon.svg"
+              src="/icons/location_white.svg"
               alt="Location icon"
-              width={10}
-              height={12}
+              width={14}
+              height={14}
             />
-            <p className="">{country}</p>
+            <p className="text-base text-white">{country}</p>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <div className="bg-sectionBg py-20">
       <div className="container flex items-center gap-9">
-        <div className="flex flex-col gap-16">
+        <div className="max-w-[525px] flex flex-col gap-16">
           <div className="flex flex-col gap-4">
             <h1 className="text-black">
               Fast and Safe <span className="text-primary">Transport</span>
@@ -61,7 +61,7 @@ const Hero = () => {
             <Button text="Track Order" />
           </div>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="grid grid-cols-3 gap-3">
           {transaportCardDetails.map((item, index: number) => (
             <Card
               key={index}

@@ -1,25 +1,31 @@
 import { whyChooseUsData } from "@/data";
 import SectionTitle from "../SectionTitle";
-import Image from "next/image";
+import { ElementType } from "react";
 
 const Card = ({
-  icon,
+  Icon,
   title,
   description,
 }: {
-  icon: string;
+  Icon: ElementType;
   title: string;
   description: string;
 }) => {
   return (
-    <div className="w-full bg-[#FFF1F2] flex flex-col items-center gap-2 p-6">
+    <div className="w-full bg-[#FFF1F2] flex flex-col items-center gap-2 p-6 duration-700 group hover:bg-primary">
       <div className="flex flex-col items-center gap-4">
-        <div className="w-[5.625rem] h-[5.625rem] bg-primary flex justify-center items-center rounded-full">
-          <Image src={icon} alt={title} width={48} height={48} />
+        <div className="w-[5.625rem] h-[5.625rem] bg-primary flex justify-center items-center rounded-full duration-500 group-hover:bg-white">
+          {
+            <Icon className="fill-white duration-500 group-hover:fill-primary" />
+          }
         </div>
-        <p className="w-full font-semibold text-2xl text-black">{title}</p>
+        <p className="w-full font-semibold text-2xl text-black duration-500 group-hover:text-white">
+          {title}
+        </p>
       </div>
-      <p className="text-[#464646]">{description}</p>
+      <p className="text-[#464646] duration-500 group-hover:text-white">
+        {description}
+      </p>
     </div>
   );
 };
