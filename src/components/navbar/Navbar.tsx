@@ -18,6 +18,20 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 border border-primary rounded px-2 py-1">
+            <Image
+              src="/icons/nav_icon.png"
+              alt="nav icon"
+              width={30}
+              height={30}
+            />
+            <Image
+              src="/icons/arrow_down_icon.png"
+              alt="arrow down"
+              width={10}
+              height={5}
+            />
+          </div>
           <Button style="outline" text="Book Now" />
           <Button text="Track Order" />
         </div>
