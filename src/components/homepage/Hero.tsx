@@ -53,6 +53,11 @@ const Hero = () => {
             </p>
           </div>
           <div className="flex items-center gap-4">
+            <input
+              type="text"
+              placeholder="Enter your booking number.."
+              className="w-[300px] border-[0.4px] border-[rgba(77,77,77,0.8)] rounded p-[.625rem]"
+            />
             <Button text="Track Order" />
           </div>
         </div>

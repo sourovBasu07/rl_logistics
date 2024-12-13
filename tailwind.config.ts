@@ -14,6 +14,7 @@ export default {
       },
       colors: {
         primary: "#FF131D",
+        secondary: "#FFE830",
         white: "#FFFFFF",
         black: "#000000",
         sectionBg: "rgba(246, 246, 246, 0.8)",

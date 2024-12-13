@@ -1,6 +1,7 @@
 import { topbarDetails } from "@/data";
 import Button from "../shared/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 const TopBar = () => {
   return (
@@ -15,19 +16,23 @@ const TopBar = () => {
           ))}
         </div>
         <div className="flex items-center gap-6">
-          <Button
-            style="outline"
-            size="sm"
-            text="User Login"
-            icon="/icons/user_icon.svg"
-          />
+          <Link href="/login">
+            <Button
+              style="outline"
+              size="sm"
+              text="User Login"
+              icon="/icons/user_icon.svg"
+            />
+          </Link>
 
-          <Button
-            style="secondary"
-            size="sm"
-            text="Admin Login"
-            icon="/icons/user_circle_icon.svg"
-          />
+          <Link href="/admin">
+            <Button
+              style="secondary"
+              size="sm"
+              text="Admin Login"
+              icon="/icons/user_circle_icon.svg"
+            />
+          </Link>
         </div>
       </div>
       <div className="w-full h-[0.06rem] bg-[#57595C]" />

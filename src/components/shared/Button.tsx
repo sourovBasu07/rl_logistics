@@ -10,10 +10,12 @@ type ButtonProps = {
 };
 
 const styles = {
-  primary: "bg-primary text-white",
-  secondary: "bg-[#FFE830] text-primary",
+  primary:
+    "bg-primary font-medium text-white hover:bg-secondary hover:text-primary",
+  secondary:
+    "bg-[#FFE830] font-medium text-primary hover:bg-primary hover:text-white",
   outline:
-    "bg-transparent text-primary px-7 py-[.625rem] rounded border border-primary font-medium",
+    "bg-transparent text-primary px-7 py-[.625rem] rounded border border-primary font-medium hover:bg-secondary hover:text-primary",
 };
 
 const sizes = {
@@ -30,7 +32,9 @@ const Button = ({
   onClick,
 }: ButtonProps) => {
   return (
-    <div className={`${styles[style]} ${sizes[size]} flex items-center gap-2`}>
+    <div
+      className={`${styles[style]} ${sizes[size]} flex items-center gap-2 duration-700 cursor-pointer`}
+    >
       {icon && <Image src={icon} alt="Icon" width={20} height={20} />}
       <button type={type} className={``} onClick={onClick}>
         {text}

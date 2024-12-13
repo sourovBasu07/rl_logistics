@@ -31,6 +31,10 @@ const ContactUs = () => {
         center
         className="w-[900px] max-w-full"
       />
+      <div className="w-full flex items-start gap-14">
+        <div className="flex-1"></div>
+        <div className="flex-[1.35]"></div>
+      </div>
       <div className="w-full flex flex-col gap-3">
         {faqs.map((faq, index: number) => (
           <Faq key={index} {...faq} />
