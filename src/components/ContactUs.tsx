@@ -23,6 +23,8 @@ const Faq = ({ question, answer }: { question: string; answer: string }) => {
 };
 
 import { ElementType } from "react";
+import Input from "./shared/Input";
+import Button from "./shared/Button";
 
 const ContactCard = ({
   Icon,
@@ -62,8 +64,8 @@ const ContactCard = ({
 const ContactUs = () => {
   return (
     <section className="container flex flex-col items-center gap-12 py-28">
-      <div className="w-full flex items-start gap-14">
-        <div className="flex-1">
+      <div className="w-full flex items-center gap-14">
+        <div className="flex-1 space-y-10">
           <div className={`w-[550px] flex flex-col gap-6`}>
             <div className={`flex flex-col gap-4`}>
               <div className="flex items-center gap-3">
@@ -83,13 +85,13 @@ const ContactUs = () => {
               merchandise through land transport.
             </p>
           </div>
-          <div className="">
+          <div className="space-y-4">
             {contactsDetails.map((item, index: number) => (
               <ContactCard key={index} {...item} />
             ))}
           </div>
         </div>
-        <div className="flex-[1.35]">
+        <div className="flex-[1.35] flex flex-col items-start gap-10">
           <div className={`w-[550px] flex flex-col gap-6`}>
             <div className={`flex flex-col gap-4`}>
               <div className="flex items-center gap-3">
@@ -104,6 +106,20 @@ const ContactUs = () => {
               </p>
             </div>
           </div>
+          <div className="grid grid-cols-2 gap-10">
+            <Input style="booknow" label="Name" required labelWidth="80px" />
+            <Input style="booknow" label="Email" required labelWidth="80px" />
+            <Input style="booknow" label="Phone" required labelWidth="80px" />
+            <Input style="booknow" label="Subject" required labelWidth="80px" />
+          </div>
+          <Input
+            style="booknow"
+            type="textarea"
+            label="Message"
+            required
+            labelWidth="80px"
+          />
+          <Button text="Send Message" className="mt-8" />
         </div>
       </div>
       <SectionTitle
