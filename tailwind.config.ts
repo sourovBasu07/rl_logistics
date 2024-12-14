@@ -18,6 +18,7 @@ export default {
         white: "#FFFFFF",
         black: "#000000",
         sectionBg: "rgba(246, 246, 246, 0.8)",
+        neutralBlack: "#111111",
       },
       borderRadius: {},
       keyframes: {

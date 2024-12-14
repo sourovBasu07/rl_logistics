@@ -32,12 +32,6 @@ const Navbar = () => {
         title: activeLink.textContent || "",
       });
     }
-
-    const timeout = setTimeout(() => {
-      setClickedLink(null);
-    }, 500);
-
-    return () => clearTimeout(timeout);
   }, [pathname]);
 
   const handleClick = (link: string) => {
@@ -109,14 +103,16 @@ const Navbar = () => {
             <Image
               src="/icons/nav_icon.png"
               alt="nav icon"
-              width={30}
-              height={30}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-[1.875rem] h-[1.875rem] object-cover"
             />
             <Image
               src="/icons/arrow_down_icon.png"
               alt="arrow down"
               width={10}
-              height={5}
+              height={15}
             />
           </div>
           <Link href="/book-now">

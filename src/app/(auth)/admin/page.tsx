@@ -26,8 +26,12 @@ const page = () => {
                 height={5}
               />
             </div>
-            <Input label="Your Email" />
-            <Input type="password" label="Your Password" />
+            <Input label="User Id" placeholder="Enter your user id" />
+            <Input
+              type="password"
+              label="Your Password"
+              placeholder="***********"
+            />
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <input
@@ -41,7 +45,7 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <button className="w-[331px] mx-auto bg-primary rounded text-white py-2">
+          <button className="w-[331px] mx-auto bg-primary rounded text-white duration-500 py-2 hover:bg-secondary hover:text-primary">
             Log in
           </button>
         </div>

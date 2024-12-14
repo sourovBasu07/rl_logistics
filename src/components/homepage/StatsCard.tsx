@@ -15,7 +15,7 @@ const StatsCard = ({ title, count }: { title: string; count: number }) => {
             </div>
           )}
         </CountUp>
-        <p className="font-medium text-lg text-[#111111]">{title}</p>
+        <p className="font-medium text-lg text-neutralBlack">{title}</p>
       </div>
     );
   return (
@@ -31,7 +31,7 @@ const StatsCard = ({ title, count }: { title: string; count: number }) => {
           </h2>
         )}
       </CountUp>
-      <p className="font-medium text-lg text-[#111111]">{title}</p>
+      <p className="font-medium text-lg text-neutralBlack">{title}</p>
     </div>
   );
 };

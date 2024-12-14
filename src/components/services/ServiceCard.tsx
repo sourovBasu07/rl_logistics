@@ -30,7 +30,7 @@ const ServiceCard = ({
         <p className="font-semibold text-[2rem] leading-[2.9rem]">{title}</p>
         <p className="text-[#464646] leading-6">{description}</p>
         <div className="flex items-center gap-2">
-          <p className="font-medium text-[#111111]">Explore More</p>
+          <p className="font-medium text-neutralBlack">Explore More</p>
           <Image
             src="/icons/long_arrow_icon.png"
             alt="explore arrow"

@@ -27,8 +27,12 @@ const page = () => {
         </div>
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-5">
-            <Input label="Your Email" />
-            <Input type="password" label="Your Password" />
+            <Input label="Your Email" placeholder="Enter your email" />
+            <Input
+              type="password"
+              label="Your Password"
+              placeholder="***************"
+            />
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <input
@@ -43,7 +47,7 @@ const page = () => {
             </div>
           </div>
           <div className="w-[331px] flex flex-col gap-5 mx-auto">
-            <button className="w-full bg-primary rounded text-white py-2">
+            <button className="w-full bg-primary rounded text-white duration-500 py-2 hover:bg-secondary hover:text-primary">
               Log in
             </button>
             <button className="w-full py-2 flex justify-center items-center gap-2 border border-[rgba(0,0,0,0.4)] rounded">

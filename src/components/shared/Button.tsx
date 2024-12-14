@@ -7,6 +7,7 @@ type ButtonProps = {
   size?: "base" | "sm";
   icon?: string;
   onClick?: () => void;
+  className?: string;
 };
 
 const styles = {
@@ -15,7 +16,7 @@ const styles = {
   secondary:
     "bg-[#FFE830] font-medium text-primary hover:bg-primary hover:text-white",
   outline:
-    "bg-transparent text-primary px-7 py-[.625rem] rounded border border-primary font-medium hover:bg-secondary hover:text-primary",
+    "bg-transparent text-primary px-7 py-[.625rem] rounded border border-primary font-medium hover:bg-secondary hover:border-secondary hover:text-primary",
 };
 
 const sizes = {
@@ -29,14 +30,16 @@ const Button = ({
   style = "primary",
   size = "base",
   icon,
+  className,
   onClick,
 }: ButtonProps) => {
   return (
     <div
-      className={`${styles[style]} ${sizes[size]} flex items-center gap-2 duration-700 cursor-pointer`}
+      className={`${styles[style]} ${sizes[size]} flex justify-center items-center gap-2 duration-700 cursor-pointer ${className}`}
+      onClick={onClick}
     >
       {icon && <Image src={icon} alt="Icon" width={20} height={20} />}
-      <button type={type} className="whitespace-nowrap" onClick={onClick}>
+      <button type={type} className="whitespace-nowrap">
         {text}
       </button>
     </div>

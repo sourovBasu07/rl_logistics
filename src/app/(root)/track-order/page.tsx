@@ -16,7 +16,7 @@ const page = () => {
         <input
           type="text"
           placeholder="Enter your booking number.."
-          className="w-full border-[0.4px] border-[rgba(77,77,77,0.8)] rounded p-[.625rem]"
+          className="w-full border-[0.4px] border-[rgba(77,77,77,0.3)] rounded px-6 py-4 outline-none"
         />
         <Button text="Track Order" />
       </div>

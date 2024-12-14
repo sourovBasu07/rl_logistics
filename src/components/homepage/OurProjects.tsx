@@ -39,7 +39,7 @@ const OurProjects = () => {
       />
       <div className="h-[800px] grid grid-rows-6 grid-flow-col gap-4">
         {images.map((image, index: number) => (
-          <div key={index} className={`${image.area}`}>
+          <div key={index} className={`relative ${image.area} group`}>
             <Image
               src={image.image}
               alt="Image"
@@ -48,6 +48,7 @@ const OurProjects = () => {
               sizes="100vw"
               className={`w-full h-full object-cover`}
             />
+            <div className="absolute inset-0 w-full h-full rounded-[0.375rem] duration-500 group-hover:bg-black/30" />
           </div>
         ))}
       </div>

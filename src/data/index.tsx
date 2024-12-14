@@ -1,6 +1,9 @@
 import {
   ClockIcon,
   CompensationIcon,
+  EmailIcon,
+  LocationIcon,
+  PhoneIcon,
   PlaneIcon,
   ResultsIcon,
   TrainIcon,
@@ -319,5 +322,23 @@ export const faqs = [
     question: "What options for logistics plans are available?",
     answer:
       "Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam. Risus rutrum tellus is eget ultrices many pretium nisi amet facilisis. Augue eu vulputate tortor egestas cursus vivamus. that any Commodo iaculis eget massa phasellus ultrices nunc dignissim.",
+  },
+];
+
+export const contactsDetails = [
+  {
+    title: "Call Us 24/7",
+    Icon: PhoneIcon,
+    details: ["+86 130 9375 6351", "+880100000000"],
+  },
+  {
+    title: "Make A Quote",
+    Icon: EmailIcon,
+    details: ["admin@rllogistics.com", "admin@rllogistics.com"],
+  },
+  {
+    title: "Service Station",
+    Icon: LocationIcon,
+    details: ["66 broklyn golden street 600 New york. China"],
   },
 ];
