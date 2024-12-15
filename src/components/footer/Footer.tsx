@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className="bg-[#020407] pt-[5.5rem]">
+    <section className="hidden lg:block bg-[#020407] pt-[5.5rem]">
       <div className="container">
         <div className="flex justify-between">
           <div className="max-w-[415px] flex flex-col">

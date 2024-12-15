@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const TopBar = () => {
   return (
-    <div className="bg-white">
+    <div className="hidden lg:block bg-white">
       <div className="container flex justify-between items-center py-4">
         <div className="flex items-center gap-6 divide-x-[1px] divide-black">
           {topbarDetails.map((item) => (
