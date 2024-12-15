@@ -11,6 +11,7 @@ export default {
     extend: {
       fontFamily: {
         outfit: ["var(--font-outfit)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
       colors: {
         primary: "#FF131D",
@@ -19,6 +20,17 @@ export default {
         black: "#000000",
         sectionBg: "rgba(246, 246, 246, 0.8)",
         neutralBlack: "#111111",
+        dashboardBg: "#F0F0F0",
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
       borderRadius: {},
       keyframes: {

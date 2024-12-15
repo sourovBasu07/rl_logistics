@@ -11,7 +11,7 @@ const HowItWorks = () => {
         description=""
         center
       />
-      <div className="flex gap-5">
+      <div className="flex flex-col lg:flex-row gap-5">
         {deliveryProcessData.map((item) => (
           <DeliveryCard key={item.title} {...item} />
         ))}

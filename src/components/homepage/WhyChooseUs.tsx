@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
         center
         className="w-[900px] max-w-full"
       />
-      <div className="w-full flex gap-5">
+      <div className="w-full flex flex-col lg:flex-row gap-5">
         {whyChooseUsData.map((item) => (
           <Card key={item.title} {...item} />
         ))}

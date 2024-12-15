@@ -10,22 +10,22 @@
     @apply w-full h-full font-outfit overflow-x-hidden scroll-smooth;
   }
   h1 {
-    @apply font-bold text-[4.375rem] leading-[4.8125rem];
+    @apply font-bold text-[2.5rem] lg:text-[4.375rem] leading-[2.75rem] lg:leading-[4.8125rem];
   }
   h2 {
-    @apply font-semibold text-[3.125rem] leading-[4.125rem];
+    @apply font-semibold text-3xl lg:text-[3.125rem] lg:leading-[4.125rem];
   }
   h3 {
     @apply font-medium text-[1.375rem] leading-[1.875rem];
   }
   h4 {
-    @apply font-medium text-xl leading-[1.875rem];
+    @apply font-medium text-sm lg:text-xl leading-[1.875rem];
   }
 }
 
 @layer components {
   .container {
-    @apply max-w-[1440px] mx-auto px-14;
+    @apply max-w-[1440px] mx-auto px-10 lg:px-14;
   }
 }
 

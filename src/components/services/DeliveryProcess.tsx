@@ -12,7 +12,7 @@ const DeliveryProcess = () => {
           description=""
           center
         />
-        <div className="w-full flex justify-between relative my-10">
+        <div className="w-full grid grid-cols-2 lg:flex justify-between relative my-10">
           {parcelDeliveryProcessData.map((item, index: number) => (
             <DeliveryCard key={item.title} {...item} index={index} />
           ))}

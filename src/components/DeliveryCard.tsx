@@ -11,18 +11,11 @@ const DeliveryCard = ({
 }) => {
   return (
     <div className="bg-[#FFF1F2] flex flex-col gap-4 p-6 ease-in-out duration-700 group hover:bg-primary">
-      <div className="flex gap-5">
-        <div className="min-w-[5.625rem] h-[5.625rem] bg-primary flex justify-center items-center rounded-full duration-500 group-hover:bg-white">
+      <div className="flex items-center lg:items-start gap-5">
+        <div className="min-w-[4.0625rem] lg:min-w-[5.625rem] h-[4.0625rem] lg:h-[5.625rem] bg-primary flex justify-center items-center rounded-full duration-500 group-hover:bg-white">
           {<Icon className="fill-white group-hover:fill-primary" />}
-          {/* <Image
-            src={icon}
-            alt={title}
-            width={48}
-            height={48}
-            className="fill-white hover:fill-secondary"
-          /> */}
         </div>
-        <p className="w-full font-semibold text-2xl text-black duration-500 group-hover:text-white">
+        <p className="w-full font-semibold text-lg lg:text-2xl text-black duration-500 group-hover:text-white">
           {title}
         </p>
       </div>

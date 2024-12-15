@@ -6,7 +6,7 @@ const Industries = () => {
   return (
     <section className="container flex flex-col gap-9 pb-24">
       <div className="flex items-center gap-20">
-        <div className="w-[500px] h-[250px] rounded-md">
+        <div className="hidden lg:block w-[500px] h-[250px] rounded-md">
           <Image
             src="/images/manage_works.jpeg"
             alt="Manage works"
@@ -24,7 +24,7 @@ const Industries = () => {
       </div>
       <div className="flex items-center gap-20">
         <div className="flex flex-1 justify-between">
-          <div className="flex flex-col gap-5">
+          <div className="grid grid-cols-2 lg:flex flex-col gap-5">
             {industriesData.map((industry) => (
               <li
                 key={industry}
@@ -45,7 +45,7 @@ const Industries = () => {
             ))}
           </div>
         </div>
-        <div className="w-[500px] h-[210px] rounded-md">
+        <div className="w-0 lg:w-[500px] h-[210px] rounded-md">
           <Image
             src="/images/industry_image.jpeg"
             alt="Manage works"

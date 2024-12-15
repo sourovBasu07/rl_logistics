@@ -41,9 +41,9 @@ const Card = ({ title, image, country }: CardProps) => {
 const Hero = () => {
   return (
     <div className="bg-sectionBg py-20">
-      <div className="container flex items-center gap-9">
-        <div className="max-w-[525px] flex flex-col gap-16">
-          <div className="flex flex-col gap-4">
+      <div className="container flex flex-col sm:flex-row items-center gap-9">
+        <div className="w-full lg:max-w-[525px] flex flex-col gap-16">
+          <div className="w-full flex flex-col gap-4">
             <h1 className="text-black">
               Fast and Safe <span className="text-primary">Transport</span>
             </h1>
@@ -52,7 +52,7 @@ const Hero = () => {
               delivery, cost-efficiency, and seamless supply chain management.{" "}
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col lg:flex-row items-center gap-4">
             <input
               type="text"
               placeholder="Enter your booking number.."
@@ -61,7 +61,7 @@ const Hero = () => {
             <Button text="Track Order" />
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="hidden lg:grid grid-cols-3 gap-3">
           {transaportCardDetails.map((item, index: number) => (
             <Card
               key={index}

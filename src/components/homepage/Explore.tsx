@@ -4,14 +4,14 @@ import Button from "../shared/Button";
 
 const Explore = () => {
   return (
-    <section className="container flex items-center gap-24 py-28">
+    <section className="container flex flex-col lg:flex-row items-center gap-6 lg:gap-24 py-28">
       <div className="flex flex-col items-start gap-16">
         <SectionTitle
           name="Explore Tutorial"
           title="Check out our tutorial to book our services"
           description="Reliable logistics and transport solutions ensuring timely delivery, cost-efficiency, and seamless supply chain management. "
         />
-        <Button text="Book Now" />
+        <Button text="Book Now" className="hidden lg:block" />
       </div>
 
       <div className="relative">
@@ -30,6 +30,7 @@ const Explore = () => {
           />
         </div>
       </div>
+      <Button text="Book Now" className="lg:hidden mt-4" />
     </section>
   );
 };

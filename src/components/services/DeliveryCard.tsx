@@ -15,14 +15,14 @@ const DeliveryCard = ({
     <div
       key={title}
       className={`w-full relative flex flex-col items-center space-y-2 ${
-        index % 2 === 0 ? "-translate-y-[4.5625rem]" : "-translate-y-0"
+        index % 2 === 0 ? "lg:-translate-y-[4.5625rem]" : "-translate-y-0"
       }`}
     >
       {/* Dashed Line */}
 
       {index !== 3 && (
         <div
-          className={`absolute top-1/2 left-1/2 w-full h-[2px] border-t-2 border-dashed border-red-500 translate-x-[30px] -translate-y-[52px] origin-left ${
+          className={`hidden lg:block absolute top-1/2 left-1/2 w-full h-[2px] border-t-2 border-dashed border-red-500 translate-x-[30px] -translate-y-[52px] origin-left ${
             index % 2 === 0 ? "rotate-[15deg]" : "-rotate-[20deg]"
           } z-0`}
         />
@@ -45,7 +45,7 @@ const DeliveryCard = ({
 
       {/* Title and Description */}
       <h3 className="font-medium text-xl text-[#0F0F0F] pt-4">{title}</h3>
-      <p className="max-w-[250px] text-base text-[#646464] mt-4 ml-[5.55rem]">
+      <p className="hidden lg:block max-w-[250px] text-base text-[#646464] mt-4 ml-[5.55rem]">
         {description}
       </p>
     </div>
