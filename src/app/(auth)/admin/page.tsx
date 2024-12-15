@@ -45,9 +45,11 @@ const page = () => {
               </Link>
             </div>
           </div>
-          <button className="w-[331px] mx-auto bg-primary rounded text-white duration-500 py-2 hover:bg-secondary hover:text-primary">
-            Log in
-          </button>
+          <Link href="/dashboard" className="w-[331px] mx-auto">
+            <button className="w-full bg-primary rounded text-white duration-500 py-2 hover:bg-secondary hover:text-primary">
+              Log in
+            </button>
+          </Link>
         </div>
       </div>
     </section>

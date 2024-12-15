@@ -22,6 +22,7 @@ import EmployeeIcon from "./icons/employees_icon.svg";
 import SettingsIcon from "./icons/settings_icon.svg";
 import LogoutIcon from "./icons/logout_icon.svg";
 import MenuIcon from "./icons/menu-icon.svg";
+import CircleUsericon from "./icons/user_circle_icon.svg";
 
 export {
   PlaneIcon,
@@ -48,4 +49,5 @@ export {
   SettingsIcon,
   LogoutIcon,
   MenuIcon,
+  CircleUsericon,
 };

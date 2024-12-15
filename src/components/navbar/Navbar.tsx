@@ -165,19 +165,50 @@ const Navbar = () => {
           />
         </div>
         {isActive && (
-          <div className="h-full flex flex-col justify-between mt-12 pb-4">
-            <div className="flex flex-col items-center gap-6 text-black">
+          <div className="fixed left-0 top-[4.5rem] w-screen h-[calc(100%-55px)] flex flex-col bg-white mt-12 pb-4 px-8 z-10">
+            <div className="grid grid-cols-2 gap-x-5 gap-y-4">
               {navbarOptions.map((nav) => (
-                <Link key={nav.title} href={nav.link} className="">
+                <Link
+                  key={nav.title}
+                  href={nav.link}
+                  className={`w-full ${
+                    pathname === nav.link
+                      ? "bg-[#FCDFE1] text-primary"
+                      : "text-neutralBlack"
+                  } rounded p-3`}
+                  onClick={() => setIsActive(false)}
+                >
                   {nav.title}
                 </Link>
               ))}
-              <div className="flex flex-col gap-6 text-blacky cursor-pointer">
-                <Link href="/login" className="">
-                  Sign in
+            </div>
+            <div className="flex justify-between px-7 py-10">
+              <Link href="/book-now">
+                <Button style="outline" text="Book Now" />
+              </Link>
+              <Link href="/track-order">
+                <Button text="Track Order" />
+              </Link>
+            </div>
+            <div className="flex flex-col gap-4">
+              <p className="font-semibold text-neutralBlack">Login</p>
+              <div className="flex gap-6">
+                <Link href="/login">
+                  <Button
+                    style="outline"
+                    size="sm"
+                    text="User Login"
+                    icon="/icons/user_icon.svg"
+                  />
                 </Link>
-                <Link href="/signup" className="">
-                  Join us
+
+                <Link href="/admin">
+                  <Button
+                    style="secondary"
+                    size="sm"
+                    text="Admin Login"
+                    icon="/icons/user_circle_icon.svg"
+                  />
                 </Link>
               </div>
             </div>

@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className="hidden lg:block bg-[#020407] pt-[5.5rem]">
+    <section className="bg-[#020407] pt-[5.5rem]">
       <div className="container">
-        <div className="flex justify-between">
+        <div className="flex flex-col lg:flex-row justify-between gap-5 lg:gap-0">
           <div className="max-w-[415px] flex flex-col">
             <Image
               src="/images/footer_logo.png"
@@ -78,9 +78,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="mt-9 lg:mt-0">
           <div className="w-full h-[1px] bg-white" />
-          <p className="text-white text-base py-8">
+          <p className="text-white text-base text-center lg:text-left py-3 lg:py-8">
             Copyright © 2024 | Alright reserved by{" "}
             <span className="font-medium text-lg">RL Logistics.</span>
           </p>
