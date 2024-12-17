@@ -2,9 +2,10 @@ type InputProps = {
   label?: string;
   placeholder?: string;
   type?: "text" | "email" | "password" | "textarea";
-  style?: "primary" | "booknow";
+  style?: "primary" | "booknow" | "employee";
   required?: boolean;
   labelWidth?: string;
+  className?: string;
 };
 
 const Input = ({
@@ -14,7 +15,23 @@ const Input = ({
   required = false,
   placeholder = "",
   labelWidth = "160px",
+  className,
 }: InputProps) => {
+  if (style === "employee") {
+    return (
+      <div
+        className={`flex flex-col gap-3 border-b border-b-[#707070] group focus-within:border-b-black p-[.625rem] ${className}`}
+      >
+        <label className="font-medium text-lg text-[#2C2C2C]">{label}</label>
+        <input
+          type={type}
+          required={required}
+          placeholder={placeholder}
+          className="bg-transparent outline-none border-none py-1 text-lg"
+        />
+      </div>
+    );
+  }
   if (style === "booknow") {
     if (type === "textarea") {
       return (
