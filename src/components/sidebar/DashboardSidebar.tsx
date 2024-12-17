@@ -60,18 +60,18 @@ const items = [
     icon: ReportIcon,
   },
   {
-    title: "Message",
-    url: "/message",
+    title: "Messages",
+    url: "/messages",
     icon: MessageIcon,
   },
   {
-    title: "Notification",
-    url: "/notification",
+    title: "Notifications",
+    url: "/notifications",
     icon: NotificationIcon,
   },
   {
-    title: "Customer",
-    url: "/customer",
+    title: "Customers",
+    url: "/customers",
     icon: CustomerIcon,
   },
   {

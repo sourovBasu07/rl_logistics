@@ -1,4 +1,10 @@
+import DashboardStructure from "@/components/DsahboardStructure";
+
 const page = () => {
-  return <div>page</div>;
+  return (
+    <DashboardStructure title="Report">
+      <div className=""></div>
+    </DashboardStructure>
+  );
 };
 export default page;

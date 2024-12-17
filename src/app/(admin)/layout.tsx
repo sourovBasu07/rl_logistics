@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "@/app/globals.css";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import DashboardSidebar from "@/components/sidebar/DashboardSidebar";
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
@@ -23,10 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-dashboardBg ${inter.variable} antialiased`}>
+      <body
+        className={`bg-dashboardBg ${inter.variable} ${outfit.variable} antialiased`}
+      >
         <SidebarProvider>
           <DashboardSidebar />
-          <main className="w-full">{children}</main>
+          <main className="w-[calc(100%-300px)] font-outfit">{children}</main>
         </SidebarProvider>
       </body>
     </html>

@@ -34,3 +34,10 @@
   width: 4px;
   border-radius: 2.5rem;
 }
+
+.scrollbar {
+  ::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 2.5rem;
+  }
+}

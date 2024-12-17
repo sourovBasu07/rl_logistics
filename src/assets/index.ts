@@ -23,6 +23,9 @@ import SettingsIcon from "./icons/settings_icon.svg";
 import LogoutIcon from "./icons/logout_icon.svg";
 import MenuIcon from "./icons/menu-icon.svg";
 import CircleUsericon from "./icons/user_circle_icon.svg";
+import EditIcon from "./icons/edit_icon.svg";
+import SearchIcon from "./icons/search_icon.svg";
+import DeleteIcon from "./icons/delete_icon.svg";
 
 export {
   PlaneIcon,
@@ -50,4 +53,7 @@ export {
   LogoutIcon,
   MenuIcon,
   CircleUsericon,
+  EditIcon,
+  SearchIcon,
+  DeleteIcon,
 };
