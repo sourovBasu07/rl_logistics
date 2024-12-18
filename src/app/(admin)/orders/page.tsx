@@ -1,8 +1,13 @@
+"use client";
+
 import DashboardStructure from "@/components/DsahboardStructure";
 import Table from "@/components/shared/Table";
 import { ordersData } from "@/data/adminData";
+import { useRouter } from "next/navigation";
 
-const page = () => {
+const OrderDetails = () => {
+  const router = useRouter();
+
   const config = [
     { key: "bookingId", name: "Booking Id" },
     { key: "containerId", name: "Container Id" },
@@ -17,12 +22,17 @@ const page = () => {
 
   const actions = [
     {
-      name: "Edit",
+      name: "Details",
       Icon: (
         <p className="bg-primary rounded px-4 py-2 text-lg text-white">
           Details
         </p>
       ),
+      onClick: (name: string, item: (typeof ordersData)[0]) => {
+        console.log(name, item);
+
+        router.push("/order-details");
+      },
     },
   ];
 
@@ -34,4 +44,4 @@ const page = () => {
     </DashboardStructure>
   );
 };
-export default page;
+export default OrderDetails;

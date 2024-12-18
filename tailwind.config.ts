@@ -21,6 +21,7 @@ export default {
         sectionBg: "rgba(246, 246, 246, 0.8)",
         neutralBlack: "#111111",
         dashboardBg: "#F0F0F0",
+        borderColor: "#707070",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

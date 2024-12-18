@@ -8,11 +8,11 @@ const page = () => {
     { key: "userName", name: "User Name" },
     { key: "emailPhone", name: "Email/Phone" },
     { key: "status", name: "Status" },
-  ] as { key: keyof (typeof customerData)[0]; name: string }[]; // Type Assertion
+  ] as { key: keyof (typeof customerData)[0]; name: string }[];
 
   const actions = [
     {
-      name: "Edit",
+      name: "Delete",
       Icon: <DeleteIcon />,
     },
   ];

@@ -28,10 +28,14 @@ const DashboardStructure = ({
             </p>
           </div>
           <div className="w-full h-[1px] bg-[#57595C]" />
-          <div className="">
-            <p className="font-medium text-[2rem] text-neutralBlack">{label}</p>
-            <div className="w-full h-[1px] bg-[#57595C] mt-4 mb-8" />
-          </div>
+          {label && (
+            <div className="">
+              <p className="font-medium text-[2rem] text-neutralBlack">
+                {label}
+              </p>
+              <div className="w-full h-[1px] bg-[#57595C] mt-4 mb-8" />
+            </div>
+          )}
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

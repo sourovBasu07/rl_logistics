@@ -7,6 +7,7 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
+  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
@@ -40,8 +41,8 @@ const items = [
     icon: BookingIcon,
   },
   {
-    title: "Container",
-    url: "/container",
+    title: "Containers",
+    url: "/containers",
     icon: ContainerIcon,
   },
   {
@@ -55,8 +56,8 @@ const items = [
     icon: DeliveryIcon,
   },
   {
-    title: "Report",
-    url: "/report",
+    title: "Reports",
+    url: "/reports",
     icon: ReportIcon,
   },
   {
@@ -106,40 +107,84 @@ const DashboardSidebar = () => {
           <SidebarGroupLabel className="pt-7"></SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="flex flex-col gap-2 pl-7 pr-10">
-              {items.map((item) => (
-                <SidebarMenuItem
-                  key={item.title}
-                  className={`w-[218px] rounded-lg ${
-                    pathname === item.url ? "bg-[#FCDFE1] text-primary" : ""
-                  } p-3`}
-                >
-                  <SidebarMenuButton asChild className="">
-                    <Link
-                      href={item.url}
-                      className={`flex items-center gap-3 `}
+              {items.map((item) => {
+                if (
+                  item.title === "Messages" ||
+                  item.title === "Notifications"
+                ) {
+                  return (
+                    <SidebarMenuItem
+                      key={item.title}
+                      className={`w-[218px] flex items-center rounded-lg ${
+                        pathname === item.url ? "bg-[#FCDFE1] text-primary" : ""
+                      } p-3`}
                     >
-                      <div className="">
-                        <item.icon
-                          className={`w-6 h-auto ${
-                            pathname === item.url
-                              ? "stroke-primary"
-                              : "stroke-[#0F0F0F]"
-                          }`}
-                        />
-                      </div>
-                      <p
-                        className={`font-medium text-base ${
-                          pathname === item.url
-                            ? "text-primary"
-                            : "text-[#0F0F0F]"
-                        }`}
+                      <SidebarMenuButton asChild className="">
+                        <Link
+                          href={item.url}
+                          className={`flex items-center gap-3 `}
+                        >
+                          <div className="">
+                            <item.icon
+                              className={`w-6 h-auto ${
+                                pathname === item.url
+                                  ? "stroke-primary"
+                                  : "stroke-[#0F0F0F]"
+                              }`}
+                            />
+                          </div>
+                          <p
+                            className={`font-medium text-base ${
+                              pathname === item.url
+                                ? "text-primary"
+                                : "text-[#0F0F0F]"
+                            }`}
+                          >
+                            {item.title}
+                          </p>
+                        </Link>
+                      </SidebarMenuButton>
+                      <SidebarMenuBadge className="w-5 h-5 bg-primary rounded mt-3 -translate-x-7 font-semibold text-[.625rem] text-white">
+                        07
+                      </SidebarMenuBadge>
+                    </SidebarMenuItem>
+                  );
+                }
+                return (
+                  <SidebarMenuItem
+                    key={item.title}
+                    className={`w-[218px] rounded-lg ${
+                      pathname === item.url ? "bg-[#FCDFE1] text-primary" : ""
+                    } p-3`}
+                  >
+                    <SidebarMenuButton asChild className="">
+                      <Link
+                        href={item.url}
+                        className={`flex items-center gap-3 `}
                       >
-                        {item.title}
-                      </p>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+                        <div className="">
+                          <item.icon
+                            className={`w-6 h-auto ${
+                              pathname === item.url
+                                ? "stroke-primary"
+                                : "stroke-[#0F0F0F]"
+                            }`}
+                          />
+                        </div>
+                        <p
+                          className={`font-medium text-base ${
+                            pathname === item.url
+                              ? "text-primary"
+                              : "text-[#0F0F0F]"
+                          }`}
+                        >
+                          {item.title}
+                        </p>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

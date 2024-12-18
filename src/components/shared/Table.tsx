@@ -67,19 +67,19 @@ export const Table = <T,>({
       <div className="w-full overflow-x-auto scrollbar">
         <table className="min-w-full">
           <thead className="min-w-full">
-            <tr className="w-full flex justify-center items-center bg-primary py-4 font-semibold text-lg text-white">
+            <tr className="w-full flex justify-center items-center bg-primary py-4 text-lg text-white">
               {serial && data.length > 0 && (
                 <th className="text-center px-4">
-                  <div className="flex gap-1 items-center">
+                  <div className="flex gap-1 items-center font-medium">
                     <p>Sl.</p>
                     <ArrowDownUp size={16} />
                   </div>
                 </th>
               )}
-              {config.map((column) => (
+              {config.map((column, index: number) => (
                 <th
-                  key={column.name}
-                  className="bg-primary min-w-[10rem] text-center whitespace-nowrap"
+                  key={`${String(column.key)}-${index}`}
+                  className="bg-primary min-w-[10rem] font-medium text-center whitespace-nowrap"
                 >
                   <div className="">
                     <p>{column.name}</p>
@@ -105,7 +105,7 @@ export const Table = <T,>({
                 >
                   {serial && data.length > 0 && (
                     <td
-                      className={`px-4 text-center text-lg text-neutralBlack cursor-pointer`}
+                      className={`px-4 text-center text-lg text-neutralBlack`}
                     >
                       {serialArr[index] ? serialArr[index] : index + 1}
                     </td>
@@ -126,19 +126,18 @@ export const Table = <T,>({
                         );
                       if (item[key] === "") {
                         return (
-                          <p
-                            key={uuidV4()}
-                            className="min-w-[10rem] text-center text-neutralBlack"
-                          >
-                            -
-                          </p>
+                          <td key={key.toString()}>
+                            <p className="min-w-[10rem] text-center text-neutralBlack">
+                              -
+                            </p>
+                          </td>
                         );
                       }
                       return (
                         <td
                           onClick={() => onClick && onClick(item)}
                           key={key.toString()}
-                          className={`min-w-[10rem] max-w-max py-4 text-lg text-neutralBlack text-center whitespace-nowrap cursor-pointer ${
+                          className={`min-w-[10rem] max-w-max py-4 text-lg text-neutralBlack text-center whitespace-nowrap ${
                             key === "ID" ||
                             key === "StudentName" ||
                             key === "Category"
@@ -154,7 +153,7 @@ export const Table = <T,>({
                   )}
                   {actions.length > 0 ? (
                     <td
-                      className={`min-w-[2rem] text-center px-4 text-sm leading-5 cursor-pointer`}
+                      className={`min-w-[2rem] text-center px-4 text-sm leading-5`}
                     >
                       <div className="flex justify-center items-center gap-4">
                         {actions.map(({ name, Icon, onClick, className }) =>
