@@ -28,6 +28,7 @@ import SearchIcon from "./icons/search_icon.svg";
 import DeleteIcon from "./icons/delete_icon.svg";
 import Filtericon from "./icons/filter_icon.svg";
 import MailIcon from "./icons/mail_icon.svg";
+import QrcodeIcon from "./icons/qrcode_icon.svg";
 
 export {
   PlaneIcon,
@@ -60,4 +61,5 @@ export {
   DeleteIcon,
   Filtericon,
   MailIcon,
+  QrcodeIcon,
 };

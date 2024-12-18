@@ -1,6 +1,6 @@
 "use client";
 
-import { Filtericon, MailIcon, SearchIcon } from "@/assets";
+import { Filtericon, MailIcon, QrcodeIcon, SearchIcon } from "@/assets";
 import DashboardStructure from "@/components/DsahboardStructure";
 import Button from "@/components/shared/Button";
 import Input from "@/components/shared/Input";
@@ -55,7 +55,7 @@ const Delivery = () => {
       onClick: (name: string, item: (typeof ordersData)[0]) => {
         console.log(name, item);
 
-        router.push("/order-details");
+        router.push("/delivery-details");
       },
     },
   ];
@@ -119,6 +119,12 @@ const Delivery = () => {
             actions={deliveryActions}
             serial
           />
+        </div>
+        <div className="w-max flex items-center gap-2 bg-primary rounded mx-auto px-7 py-3">
+          <QrcodeIcon />
+          <p className="font-medium text-[2rem] leading-[3rem] text-white">
+            Open QR Code
+          </p>
         </div>
       </div>
     </DashboardStructure>

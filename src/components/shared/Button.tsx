@@ -8,6 +8,7 @@ type ButtonProps = {
   icon?: string;
   onClick?: () => void;
   className?: string;
+  disabled?: boolean;
 };
 
 const styles = {
@@ -32,14 +33,19 @@ const Button = ({
   icon,
   className,
   onClick,
+  disabled = false,
 }: ButtonProps) => {
   return (
     <div
-      className={`${styles[style]} ${sizes[size]} flex justify-center items-center gap-2 duration-700 cursor-pointer ${className}`}
+      className={`${styles[style]} ${
+        sizes[size]
+      } flex justify-center items-center gap-2 duration-700 cursor-pointer ${
+        disabled ? "opacity-50 cursor-auto pointer-events-none" : ""
+      } ${className}`}
       onClick={onClick}
     >
       {icon && <Image src={icon} alt="Icon" width={20} height={20} />}
-      <button type={type} className="whitespace-nowrap">
+      <button type={type} disabled={disabled} className="whitespace-nowrap">
         {text}
       </button>
     </div>
