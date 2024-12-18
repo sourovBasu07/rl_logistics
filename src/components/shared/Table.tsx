@@ -65,9 +65,9 @@ export const Table = <T,>({
   return (
     <div className="w-full overflow-auto">
       <div className="w-full overflow-x-auto scrollbar">
-        <table className="min-w-full">
-          <thead className="min-w-full">
-            <tr className="w-full flex justify-center items-center bg-primary py-4 text-lg text-white">
+        <table className="w-full table-auto border-spacing-x-10">
+          <thead className="min-w-full bg-primary">
+            <tr className="w-full bg-primary py-4 text-lg text-white border-spacing-x-10">
               {serial && data.length > 0 && (
                 <th className="text-center px-4">
                   <div className="flex gap-1 items-center font-medium">
@@ -79,7 +79,7 @@ export const Table = <T,>({
               {config.map((column, index: number) => (
                 <th
                   key={`${String(column.key)}-${index}`}
-                  className="bg-primary min-w-[10rem] font-medium text-center whitespace-nowrap"
+                  className="bg-primary px-4 font-medium text-center whitespace-nowrap"
                 >
                   <div className="">
                     <p>{column.name}</p>
@@ -101,7 +101,7 @@ export const Table = <T,>({
               data.map((item, index) => (
                 <tr
                   key={uuidV4()}
-                  className="flex justify-center items-center px-3 border-b border-b-primary hover:bg-[#D8E7FF]"
+                  className="px-3 border-b border-b-primary space-x-3 hover:bg-[#D8E7FF]"
                 >
                   {serial && data.length > 0 && (
                     <td
@@ -127,9 +127,7 @@ export const Table = <T,>({
                       if (item[key] === "") {
                         return (
                           <td key={key.toString()}>
-                            <p className="min-w-[10rem] text-center text-neutralBlack">
-                              -
-                            </p>
+                            <p className="text-center text-neutralBlack">-</p>
                           </td>
                         );
                       }
@@ -137,7 +135,7 @@ export const Table = <T,>({
                         <td
                           onClick={() => onClick && onClick(item)}
                           key={key.toString()}
-                          className={`min-w-[10rem] max-w-max py-4 text-lg text-neutralBlack text-center whitespace-nowrap ${
+                          className={`py-4 text-lg text-neutralBlack text-center whitespace-nowrap ${
                             key === "ID" ||
                             key === "StudentName" ||
                             key === "Category"

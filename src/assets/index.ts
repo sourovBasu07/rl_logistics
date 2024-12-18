@@ -26,6 +26,8 @@ import CircleUsericon from "./icons/user_circle_icon.svg";
 import EditIcon from "./icons/edit_icon.svg";
 import SearchIcon from "./icons/search_icon.svg";
 import DeleteIcon from "./icons/delete_icon.svg";
+import Filtericon from "./icons/filter_icon.svg";
+import MailIcon from "./icons/mail_icon.svg";
 
 export {
   PlaneIcon,
@@ -56,4 +58,6 @@ export {
   EditIcon,
   SearchIcon,
   DeleteIcon,
+  Filtericon,
+  MailIcon,
 };

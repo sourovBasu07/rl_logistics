@@ -1,11 +1,16 @@
+"use client";
+
+import { ReactNode, useRef } from "react";
+
 type InputProps = {
   label?: string;
   placeholder?: string;
-  type?: "text" | "email" | "password" | "textarea";
+  type?: "text" | "email" | "password" | "textarea" | "iconInput";
   style?: "primary" | "booknow" | "employee";
   required?: boolean;
   labelWidth?: string;
   className?: string;
+  Icon?: ReactNode;
 };
 
 const Input = ({
@@ -16,7 +21,10 @@ const Input = ({
   placeholder = "",
   labelWidth = "160px",
   className,
+  Icon,
 }: InputProps) => {
+  const iconInputRef = useRef<HTMLInputElement | null>(null);
+
   if (style === "employee") {
     return (
       <div
@@ -63,6 +71,29 @@ const Input = ({
       </div>
     );
   }
+
+  if (type === "iconInput") {
+    return (
+      <div
+        className={`flex flex-col cursor-text ${className} rounded overflow-hidden`}
+        onClick={() => iconInputRef?.current?.focus()}
+      >
+        <div
+          className={`w-full relative flex items-center gap-3 bg-white/80 px-[.875rem] py-[.625rem]`}
+        >
+          {Icon && Icon}
+
+          <input
+            className={`w-full bg-transparent border-none pb-1 focus:outline-none placeholder:-mt-1 placeholder:text-sm placeholder:text-[#555555]`}
+            type="text"
+            placeholder={placeholder}
+            ref={iconInputRef}
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-2">
       <label className="font-semibold text-sm">{label}</label>
