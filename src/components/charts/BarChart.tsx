@@ -1,6 +1,12 @@
 "use client";
 
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  XAxis,
+} from "recharts";
 import {
   Card,
   CardContent,
@@ -26,9 +32,6 @@ const chartData = [
   { month: "July", desktop: 186, mobile: 80 },
   { month: "August", desktop: 214, mobile: 140 },
   { month: "September", desktop: 305, mobile: 200 },
-  { month: "October", desktop: 237, mobile: 120 },
-  { month: "November", desktop: 73, mobile: 190 },
-  { month: "December", desktop: 209, mobile: 130 },
 ];
 
 const chartConfig = {
@@ -44,29 +47,32 @@ const chartConfig = {
 
 export function CustomBarChart() {
   return (
-    <Card>
+    <Card className="w-full h-[393px] shadow-[0_4px_20px_0_rgba(91, 71, 188, 0.3)]">
       <CardHeader>
         <CardTitle></CardTitle>
         <CardDescription></CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
-          <BarChart accessibilityLayer data={chartData}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="month"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
-            />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent indicator="dashed" />}
-            />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-            <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
-          </BarChart>
+      <CardContent className="w-full h-[393px]">
+        <ChartContainer config={chartConfig} className="w-full h-[300px]">
+          <ResponsiveContainer height={250}>
+            <BarChart accessibilityLayer data={chartData}>
+              <CartesianGrid strokeDasharray="4 4" />
+              <XAxis
+                dataKey="month"
+                tickLine={false}
+                tickMargin={10}
+                axisLine={false}
+                tickFormatter={(value) => value.slice(0, 3)}
+                hide
+              />
+              <ChartTooltip
+                cursor={false}
+                content={<ChartTooltipContent indicator="dashed" />}
+              />
+              <Bar dataKey="desktop" fill="#333333" radius={4} />
+              <Bar dataKey="mobile" fill="#F04A4A" radius={4} />
+            </BarChart>
+          </ResponsiveContainer>
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm"></CardFooter>

@@ -61,7 +61,7 @@ const chartConfig = {
 
 export function CustomPieChart() {
   return (
-    <Card className="w-[380px] flex flex-col bg-[url('/images/chart_bg.jpg')] bg-cover bg-opacity-10 backdrop-blur-lg">
+    <Card className="min-w-[380px] flex flex-col bg-[url('/images/chart_bg.jpg')] bg-cover bg-opacity-10 backdrop-blur-lg">
       <div className="absolute inset-0 bg-white/40 -z-10" />
       <CardHeader className="pb-0">
         <CardTitle></CardTitle>
