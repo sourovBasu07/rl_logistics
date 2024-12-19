@@ -143,3 +143,43 @@ export const settingsData = [
     country: "China",
   },
 ];
+
+export const statsData = [
+  {
+    title: "Total Shipment",
+    percentage: 75,
+    image: "/images/coins_image.png",
+    className: "bg-primary text-white",
+    circleTopColor: "#FFFFFF",
+    circleBackColor: "rgba(0, 110, 211, 0.4)",
+    circleTextColor: "#FFFFFF",
+  },
+  {
+    title: "Pending",
+    percentage: 25,
+    image: "/images/cubes_image.png",
+    className: "bg-secondary text-primary",
+    circleTopColor: "#FF131D",
+    circleBackColor: "#006ED3",
+    circleTextColor: "#006ED3",
+  },
+];
+
+export const additionalStats = [
+  {
+    title: "Delivery",
+    percentage: 30,
+    className: "bg-primary text-white",
+    circleTopColor: "",
+    circleBackColor: "",
+    circleTextColor: "",
+  },
+  {
+    title: "Return",
+    percentage: 30,
+    className: "bg-primary text-white",
+    circleTopColor: "",
+    circleBackColor: "",
+    circleTextColor: "",
+  },
+];
