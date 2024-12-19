@@ -65,21 +65,21 @@ export const Table = <T,>({
   return (
     <div className="w-full overflow-auto">
       <div className="w-full overflow-x-auto scrollbar">
-        <table className="w-full table-auto border-spacing-x-10">
+        <table className="w-full table-auto">
           <thead className="min-w-full bg-primary">
-            <tr className="w-full bg-primary py-4 text-lg text-white border-spacing-x-10">
+            <tr className="w-full bg-primary px-3 py-4 text-lg text-white text-center">
               {serial && data.length > 0 && (
                 <th className="text-center px-4">
-                  <div className="flex gap-1 items-center font-medium">
+                  <div className="flex justify-center gap-1 items-center font-medium">
                     <p>Sl.</p>
                     <ArrowDownUp size={16} />
                   </div>
                 </th>
               )}
-              {config.map((column, index: number) => (
+              {config.map((column) => (
                 <th
-                  key={`${String(column.key)}-${index}`}
-                  className="bg-primary px-4 font-medium text-center whitespace-nowrap"
+                  key={uuidV4()}
+                  className="bg-primary p-4 font-medium text-center whitespace-nowrap"
                 >
                   <div className="">
                     <p>{column.name}</p>
@@ -87,9 +87,7 @@ export const Table = <T,>({
                 </th>
               ))}
               {actions.length > 0 ? (
-                <th className="text-left px-4 min-w-[2rem] max-w-max">
-                  Actions
-                </th>
+                <th className="text-center px-4 min-w-[2rem]">Actions</th>
               ) : (
                 <></>
               )}
@@ -157,7 +155,7 @@ export const Table = <T,>({
                         {actions.map(({ name, Icon, onClick, className }) =>
                           Icon ? (
                             <div
-                              className=" hover:text-red text-[#64748B] cursor-pointer"
+                              className="cursor-pointer"
                               key={name}
                               onClick={() => onClick && onClick(name, item)}
                             >

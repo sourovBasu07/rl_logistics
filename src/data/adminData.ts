@@ -32,6 +32,11 @@ export const customerData = [
     emailPhone: "+325100121",
     status: "Online",
   },
+  {
+    userName: "User B",
+    emailPhone: "mail@gmail.com",
+    status: "Offline",
+  },
 ];
 
 export const containersData = [
@@ -114,5 +119,27 @@ export const reportsData = [
     totalPending: 12451,
     totalRejected: 150,
     revenue: "2012548$",
+  },
+];
+
+export const deliveryData = [
+  {
+    bookingId: "CN241100",
+    containerId: "L0001",
+    bookingDate: "10-11-2024",
+    senderCountry: "China",
+    receiverCountry: "Bangladesh",
+    deliveryDate: "25-11-2024",
+    productLocation: "China Warehouse",
+    updatedBy: "Md Irfan Ahmad",
+    receiverContactNumber: "+8801330000121",
+  },
+];
+
+export const settingsData = [
+  {
+    empName: "User A",
+    phone: "+325100121",
+    country: "China",
   },
 ];

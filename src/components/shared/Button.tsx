@@ -4,7 +4,7 @@ type ButtonProps = {
   text: string;
   type?: "button" | "submit";
   style?: "primary" | "secondary" | "outline";
-  size?: "base" | "sm";
+  size?: "base" | "sm" | "medium";
   icon?: string;
   onClick?: () => void;
   className?: string;
@@ -15,14 +15,15 @@ const styles = {
   primary:
     "bg-primary font-medium text-white hover:bg-secondary hover:text-primary",
   secondary:
-    "bg-[#FFE830] font-medium text-primary hover:bg-primary hover:text-white",
+    "bg-[#FFE830] font-medium border border-secondary text-primary hover:bg-primary hover:border-primary hover:text-white",
   outline:
-    "bg-transparent text-primary px-7 py-[.625rem] rounded border border-primary font-medium hover:bg-secondary hover:border-secondary hover:text-primary",
+    "bg-transparent text-primary border border-primary font-medium hover:bg-secondary hover:border-secondary hover:text-primary",
 };
 
 const sizes = {
   base: "px-7 py-3 rounded",
   sm: "px-[0.625rem] py-[0.3rem] rounded",
+  medium: "rounded px-4 py-2 text-lg",
 };
 
 const Button = ({

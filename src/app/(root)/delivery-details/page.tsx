@@ -1,5 +1,13 @@
+import { CheckIcon } from "@/assets";
 import Button from "@/components/shared/Button";
 import Table from "@/components/shared/Table";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import {
   additionalInfo,
   receiverData,
@@ -87,7 +95,28 @@ const page = () => {
         <Table data={trackingInfo} config={trackingConfig} serial />
         <div className="flex self-end gap-10">
           <Button text="Print Report" />
-          <Button text="Delivered" disabled={true} />
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button text="Deliver" />
+            </DialogTrigger>
+            <DialogContent className="w-full max-w-[900px] bg-dashboardBg">
+              <DialogHeader>
+                <DialogTitle hidden>Are you absolutely sure?</DialogTitle>
+              </DialogHeader>
+              <div className="flex flex-col items-center gap-8 bg-dashboardBg">
+                <p className="font-medium text-4xl text-neutralBlack mb-3">
+                  Message
+                </p>
+                <div className="w-20 h-20 flex justify-center items-center rounded-full border-[5px] border-primary">
+                  <CheckIcon />
+                </div>
+                <p className="font-medium text-4xl text-neutralBlack">
+                  Your delivery has been completed
+                </p>
+                <Button text="Done" />
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </div>
