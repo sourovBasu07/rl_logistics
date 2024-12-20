@@ -1,3 +1,5 @@
+"use client";
+
 import { EditIcon } from "@/assets";
 import DashboardStructure from "@/components/DashboardStructure";
 // import { TableDemo } from "@/components/shared/CustomTable";
@@ -21,7 +23,16 @@ const page = () => {
       name: "Product Location",
       visibleForMobile: true,
     },
-    { key: "status", name: "Status", visibleForMobile: true },
+    {
+      key: "status",
+      name: "Status",
+      visibleForMobile: true,
+      modify: (data: string) => (
+        <p className="bg-secondary rounded-[2px] text-black px-3 py-1 text-[.625rem]">
+          {data}
+        </p>
+      ),
+    },
     {
       key: "senderContactNumber",
       name: "Sender Contact No.",

@@ -149,10 +149,10 @@ export const Table = <T,>({
                               : "text-center whitespace-nowrap"
                           }`}
                         >
-                          <p className="clamp-2">
+                          <div className="clamp-2">
                             {modify?.(String(value || item[key])) ??
                               String(value || item[key])}
-                          </p>
+                          </div>
                         </td>
                       );
                     }
