@@ -133,12 +133,10 @@ export const Table = <T,>({
                         <td
                           onClick={() => onClick && onClick(item)}
                           key={key.toString()}
-                          className={`py-4 text-lg text-neutralBlack text-center whitespace-nowrap ${
-                            key === "ID" ||
-                            key === "StudentName" ||
-                            key === "Category"
-                              ? "text-blue"
-                              : "text-textBlue"
+                          className={`py-4 text-lg text-neutralBlack ${
+                            key === "message"
+                              ? "max-w-[350px] text-left whitespace-normal"
+                              : "text-center whitespace-nowrap"
                           }`}
                         >
                           {modify?.(String(value || item[key])) ??

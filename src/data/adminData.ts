@@ -273,3 +273,23 @@ export const settingsNavs = [
     Icon: LogoutIcon,
   },
 ];
+
+export const messagesData = [
+  {
+    name: "Mr Robiul Alom",
+    email: "jondo@gmail.com",
+    phone: "+254215422",
+    subject: "How Can I book a product",
+    message:
+      "I recently booked a parcel with RL Logistics, and I would like to inquire about its current status.",
+  },
+];
+
+export const notificationsData = [
+  {
+    containerId: "L0001",
+    currentProductLocation: "China Airport",
+    updatedBy: "Md Irfan Ahmad",
+    updatedTime: "12:30",
+  },
+];
