@@ -41,7 +41,7 @@ export function CustomAreaChart() {
   return (
     <Card className="w-full bg-[#FDF1F1]">
       <CardHeader>
-        <CardTitle>Area Chart - Legend</CardTitle>
+        <CardTitle></CardTitle>
         <CardDescription>
           Showing total visitors for the last 6 months
         </CardDescription>

@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-dashboardBg ${inter.variable} ${outfit.variable} antialiased`}
+        className={`h-screen bg-dashboardBg ${inter.variable} ${outfit.variable} antialiased`}
       >
         <SidebarProvider>
           <DashboardSidebar />

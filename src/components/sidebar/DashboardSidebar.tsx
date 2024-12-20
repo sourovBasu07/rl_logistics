@@ -93,7 +93,7 @@ const DashboardSidebar = () => {
   console.log(pathname);
 
   return (
-    <Sidebar collapsible="none" className="bg-white">
+    <Sidebar collapsible="none" className="h-screen bg-white overflow-scroll">
       <SidebarContent>
         <Image
           src="/images/logo.png"

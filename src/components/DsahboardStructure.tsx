@@ -19,7 +19,7 @@ const DashboardStructure = ({
   children: ReactNode;
 }) => {
   return (
-    <div className="w-full flex flex-col px-8 pt-10">
+    <div className="w-full h-screen flex flex-col px-8 pt-10 overflow-scroll">
       <div className="w-full flex justify-between items-start gap-20">
         <div className="w-full flex flex-col gap-10 mb-7">
           <div className="flex bg-[rgba(255,253,253,0.2)] border border-[rgba(74,74,74,0.4)] rounded-[.9375rem]">
@@ -70,7 +70,7 @@ const DashboardStructure = ({
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      {children}
+      <div className="">{children}</div>
     </div>
   );
 };
