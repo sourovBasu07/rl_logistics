@@ -44,21 +44,23 @@ const Input = ({
     if (type === "textarea") {
       return (
         <div className="w-full flex items-start gap-3 border-b border-b-[#707070] p-2 group focus-within:border-b-black">
-          <label className={`min-w-[${labelWidth}] text-lg text-[#2C2C2C]`}>
+          <label className={`w-full min-w-[150px] text-lg text-[#2C2C2C]`}>
             {label}
             {required && "*"}
           </label>
           <textarea
             required={required}
             placeholder={placeholder || "Type here..."}
-            className="w-full h-[150px] outline-none border-none px-2 py-1"
+            className="h-[150px] outline-none border-none px-2 py-1"
           />
         </div>
       );
     }
     return (
-      <div className="w-full flex items-center gap-3 border-b border-b-[#707070] p-2 group focus-within:border-b-black">
-        <label className={`min-w-[${labelWidth}] text-lg text-[#2C2C2C]`}>
+      <div className="w-full flex flex-col lg:flex-row items-start lg:items-center gap-0 lg:gap-3 border-b border-b-[#707070] p-2 group focus-within:border-b-black">
+        <label
+          className={`min-w-[${labelWidth}] text-lg text-[#2C2C2C] whitespace-nowrap`}
+        >
           {label}
           {required && "*"}
         </label>
@@ -66,7 +68,7 @@ const Input = ({
           required={required}
           type={type}
           placeholder={placeholder || "Type here..."}
-          className="outline-none border-none px-2 py-1"
+          className={`flex-1 w-full outline-none border-none px-0 lg:px-2 py-1`}
         />
       </div>
     );

@@ -5,7 +5,9 @@ const page = () => {
   return (
     <div className="container">
       <Breadcrumbs title="Book Now" pageName="Book now" />
-      <BookingForm />
+      <div className="">
+        <BookingForm />
+      </div>
     </div>
   );
 };

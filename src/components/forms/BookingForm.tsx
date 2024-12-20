@@ -12,18 +12,18 @@ const BookingForm = () => {
   console.log(openedTab);
 
   return (
-    <section className="pb-24">
-      <div className="w-full justify-between flex">
-        <p className="w-[500px] font-medium text-[1.375rem] text-neutralBlack leading-[2rem]">
+    <section className="w-full pb-24">
+      <div className="w-full flex justify-between">
+        <p className="w-full lg:w-[500px] font-medium text-base lg:text-[1.625rem] text-neutralBlack lg:leading-[2rem]">
           Sender Information
         </p>
-        <p className="w-[500px] font-medium text-[1.375rem] text-neutralBlack leading-[2rem]">
+        <p className="hidden lg:block w-[500px] font-medium text-[1.375rem] text-neutralBlack leading-[2rem]">
           Receiver Information
         </p>
       </div>
       <div className="w-full h-[1px] bg-[#57595C]" />
-      <div className="flex justify-between pb-16">
-        <div className="w-[500px] flex flex-col gap-3 py-5">
+      <div className="flex flex-col lg:flex-row justify-between pb-16">
+        <div className="w-full lg:w-[500px] flex flex-col gap-3 py-5">
           <Input
             style="booknow"
             label="Sender's Name"
@@ -79,7 +79,11 @@ const BookingForm = () => {
             required
           />
         </div>
-        <div className="w-[500px] flex flex-col gap-3 py-5">
+        <div className="w-full lg:w-[500px] flex flex-col gap-3 py-5">
+          <p className="block lg:hidden w-full font-medium text-base lg:text-[1.625rem] text-neutralBlack lg:leading-[2rem]">
+            Receiver Information
+          </p>
+          <div className="w-full h-[1px] bg-[#57595C]" />
           <Input
             style="booknow"
             label="Sender's Name"
@@ -146,13 +150,13 @@ const BookingForm = () => {
         <Button
           style={openedTab === "shipment" ? "primary" : "outline"}
           text="Yes I want"
-          className="w-[290px]"
+          className="w-[150px]"
           onClick={() => setOpenedTab("shipment")}
         />
         <Button
           style={openedTab === "link" ? "primary" : "outline"}
           text="Generate Link"
-          className="w-[290px]"
+          className="w-[150px]"
           onClick={() => setOpenedTab("link")}
         />
       </div>
@@ -164,8 +168,8 @@ const BookingForm = () => {
             </p>
           </div>
           <div className="w-full h-[1px] bg-[#57595C]" />
-          <div className="flex justify-between">
-            <div className="w-[500px] flex flex-col gap-3 py-5">
+          <div className="w-full grid grid-cols-2 gap-x-5">
+            <div className="w-full lg:w-[500px] flex flex-col gap-3 py-5">
               <Input style="booknow" label="Origin" required />
               <Input style="booknow" label="Package" />
               <Input style="booknow" label="Product Location" required />
@@ -183,7 +187,7 @@ const BookingForm = () => {
               {/* // Medium Dropdown  */}
               <Input style="booknow" label="Width (Cm)" />
             </div>
-            <div className="w-[500px] flex flex-col gap-3 py-5">
+            <div className="w-full lg:w-[500px] flex flex-col gap-3 py-5">
               <Input style="booknow" label="Height (cm)" />
               <Input style="booknow" label="Qty" />
               {/* // Delivery Method Dropdown  */}
@@ -215,7 +219,7 @@ const BookingForm = () => {
         </>
       )}
       {openedTab === "link" && (
-        <div className="w-[808px] flex justify-between items-center bg-white/80 mx-auto rounded border-[0.4px] border-primary mt-10 px-6 py-4">
+        <div className="w-full lg:w-[808px] flex justify-between items-center bg-white/80 mx-auto rounded border-[0.4px] border-primary mt-10 px-6 py-4">
           <p className="text-xl text-[#1B1B1B] opacity-60">
             https://emamplelink.bd.com
           </p>
