@@ -1,5 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import SectionTitle from "../SectionTitle";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const images = [
   {
@@ -37,7 +44,7 @@ const OurProjects = () => {
         center
         className="w-[1000px] max-w-full"
       />
-      <div className="h-[800px] grid grid-rows-6 grid-flow-col gap-4">
+      <div className="h-[800px] hidden lg:grid grid-rows-6 grid-flow-col gap-4">
         {images.map((image, index: number) => (
           <div key={index} className={`relative ${image.area} group`}>
             <Image
@@ -51,6 +58,33 @@ const OurProjects = () => {
             <div className="absolute inset-0 w-full h-full rounded-[0.375rem] duration-500 group-hover:bg-black/30" />
           </div>
         ))}
+      </div>
+      <div className="flex lg:hidden">
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-sm"
+        >
+          <CarouselContent>
+            {images.map((image, index: number) => (
+              <CarouselItem key={index}>
+                <div key={index} className={`relative ${image.area} group`}>
+                  <Image
+                    src={image.image}
+                    alt="Image"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className={`w-full h-[240px] object-cover`}
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          {/* <CarouselPrevious /> */}
+          {/* <CarouselNext /> */}
+        </Carousel>
       </div>
     </section>
   );
