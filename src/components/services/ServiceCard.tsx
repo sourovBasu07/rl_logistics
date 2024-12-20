@@ -27,7 +27,9 @@ const ServiceCard = ({
         </div>
       </div>
       <div className="flex flex-col gap-4 bg-white rounded-b-md border border-[rgba(255, 214, 214, 0.96)] border-t-0 pt-6 pb-4 pl-[.625rem] pr-4">
-        <p className="font-semibold text-[2rem] leading-[2.9rem]">{title}</p>
+        <p className="font-semibold text-2xl lg:text-[2rem] lg:leading-[2.9rem]">
+          {title}
+        </p>
         <p className="text-[#464646] leading-6">{description}</p>
         <div className="flex items-center gap-2">
           <p className="font-medium text-neutralBlack">Explore More</p>
