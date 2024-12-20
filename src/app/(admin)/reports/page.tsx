@@ -8,7 +8,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { CalendarIcon } from "lucide-react";
-import { format } from "date-fns";
+import moment from "moment";
 import { Calendar } from "@/components/ui/calendar";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -53,7 +53,7 @@ const Reports = () => {
                 )}
               >
                 {fromDate ? (
-                  format(fromDate, "dd/MM/yy")
+                  moment(fromDate).format("DD/MM/YY")
                 ) : (
                   <span>DD/MM/YY</span>
                 )}
@@ -81,7 +81,11 @@ const Reports = () => {
                   !toDate && "text-[#808080] !px-0"
                 )}
               >
-                {toDate ? format(toDate, "dd/MM/yy") : <span>DD/MM/YY</span>}
+                {toDate ? (
+                  moment(fromDate).format("DD/MM/YY")
+                ) : (
+                  <span>DD/MM/YY</span>
+                )}
                 <CalendarIcon color="#808080" />
               </Button>
             </PopoverTrigger>
