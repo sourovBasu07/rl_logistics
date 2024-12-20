@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type BlogPostCardProps = {
   image: string;
@@ -54,16 +55,18 @@ const BlogPostCard = ({
             {description}
           </p>
         </div>
-        <div className="flex items-center gap-2 cursor-pointer">
-          <p className="font-medium text-neutralBlack">Explore More</p>
-          <Image
-            src="/icons/long_arrow_icon.png"
-            alt="explore arrow"
-            width={39}
-            height={10}
-            className="mt-1"
-          />
-        </div>
+        <Link href="/our-blog/details" className="cursor-pointer">
+          <div className="flex items-center gap-2 cursor-pointer">
+            <p className="font-medium text-neutralBlack">Explore More</p>
+            <Image
+              src="/icons/long_arrow_icon.png"
+              alt="explore arrow"
+              width={39}
+              height={10}
+              className="mt-1"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

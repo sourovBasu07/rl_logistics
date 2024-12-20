@@ -6,7 +6,7 @@ const page = () => {
     <div className="container flex flex-col pb-[200px]">
       <Breadcrumbs title="Our Blog" pageName="Our blog" />
       <div className="">
-        <div className="w-full h-[340px] rounded-md">
+        <div className="w-full h-[155px] lg:h-[340px] rounded-md">
           <Image
             src="/images/blog_image_6.jpg"
             alt="post image"
@@ -16,7 +16,7 @@ const page = () => {
             className="w-full h-full object-cover rounded-md"
           />
         </div>
-        <div className="flex items-center gap-[200px] pt-6 pb-8">
+        <div className="flex justify-between items-center gap-0 lg:gap-[200px] pt-6 pb-8">
           <div className="flex items-center gap-2">
             <Image
               src="/icons/calendar_icon.png"
@@ -24,7 +24,7 @@ const page = () => {
               width={24}
               height={24}
             />
-            <p className="">10 May 2024</p>
+            <p className="whitespace-nowrap">10 May 2024</p>
           </div>
           <div className="flex items-center gap-2">
             <Image
@@ -33,7 +33,7 @@ const page = () => {
               width={24}
               height={24}
             />
-            <p className="">No Comment</p>
+            <p className="whitespace-nowrap">No Comment</p>
           </div>
         </div>
         <div className="space-y-10">
@@ -55,8 +55,8 @@ const page = () => {
               Lorem Ipsum.
             </p>
           </div>
-          <div className="flex items-center gap-10">
-            <div className="flex-1 h-[340px] rounded-md">
+          <div className="flex flex-col lg:flex-row items-center gap-10">
+            <div className="flex-1 h-[155px] lg:h-[340px] rounded-md">
               <Image
                 src="/images/blog_5.jpeg"
                 alt="post image"
@@ -93,7 +93,7 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-10">
+          <div className="flex flex-col lg:flex-row items-center gap-10">
             <p className="flex-1 text-lg text-[#232323]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
@@ -106,7 +106,7 @@ const page = () => {
               publishing software like Aldus PageMaker including versions of
               Lorem Ipsum.
             </p>
-            <div className="h-[340px] flex-[2] grid grid-cols-2 gap-5">
+            <div className="hidden h-[340px] flex-[2] lg:grid grid-cols-2 gap-5">
               <Image
                 src="/images/blog_2.jpeg"
                 alt="post image"

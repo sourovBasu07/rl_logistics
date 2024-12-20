@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="container flex flex-col items-center">
       <Breadcrumbs title="Our Blog" pageName="Our blog" />
-      <div className="grid grid-cols-12 gap-x-7 gap-y-12">
+      <div className="flex flex-col lg:grid grid-cols-12 gap-x-7 gap-y-12">
         {blogPosts.map((post, index: number) => (
           <BlogPostCard key={index} {...post} />
         ))}
