@@ -12,7 +12,7 @@ const TeamCard = ({
   title: string;
 }) => {
   return (
-    <div className="relative w-full h-[377px] rounded-md group">
+    <div className="relative w-[296px] lg:w-full h-[377px] rounded-md group">
       <Image
         src={image}
         alt={name}
@@ -60,7 +60,7 @@ const OurTeam = () => {
   return (
     <section className="container flex flex-col items-center gap-16 pb-24">
       <SectionTitle name="OUR TEAM" title="Meet our expert team" center />
-      <div className="flex gap-9">
+      <div className="flex flex-col lg:flex-row gap-16 lg:gap-9">
         {teamMembers.map((member, index: number) => (
           <TeamCard key={index} {...member} />
         ))}
