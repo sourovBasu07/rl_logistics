@@ -11,10 +11,10 @@ const Faq = ({ question, answer }: { question: string; answer: string }) => {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1" className="flex flex-col gap-3">
-        <AccordionTrigger className="bg-[#FFF6F6] border border-[#B3ADAD] rounded p-4 font-medium text-2xl text-black">
+        <AccordionTrigger className="bg-[#FFF6F6] border border-[#B3ADAD] rounded p-4 font-medium text-sm lg:text-2xl text-black text-left lg:text-center">
           {question}
         </AccordionTrigger>
-        <AccordionContent className="border border-[#B3ADAD] rounded p-4 text-base text-black">
+        <AccordionContent className="border border-[#B3ADAD] rounded p-4 text-xs lg:text-base text-black">
           {answer}
         </AccordionContent>
       </AccordionItem>
@@ -63,11 +63,11 @@ const ContactCard = ({
 
 const ContactUs = () => {
   return (
-    <section className="container flex flex-col items-center gap-12 py-28">
-      <div className="w-full flex items-center gap-14">
+    <section className="container flex flex-col items-center gap-12 pt-10 lg:pt-28 pb-28">
+      <div className="w-full flex flex-col-reverse lg:flex-row items-center gap-14">
         <div className="flex-1 space-y-10">
-          <div className={`w-[550px] flex flex-col gap-6`}>
-            <div className={`flex flex-col gap-4`}>
+          <div className={`w-full lg:w-[550px] flex flex-col gap-3 lg:gap-6`}>
+            <div className={`flex flex-col gap-0 lg:gap-4`}>
               <div className="flex items-center gap-3">
                 <h4 className="text-primary uppercase">Get a Quote</h4>
                 <div className="flex items-center gap-[2px]">
@@ -92,8 +92,10 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="flex-[1.35] flex flex-col items-start gap-10">
-          <div className={`w-[550px] flex flex-col gap-6`}>
-            <div className={`flex flex-col gap-4`}>
+          <div className={`w-full lg:w-[550px] flex flex-col gap-3 lg:gap-6`}>
+            <div
+              className={`flex flex-col items-center lg:items-start gap-0 lg:gap-4`}
+            >
               <div className="flex items-center gap-3">
                 <h4 className="text-primary uppercase">Contact for Services</h4>
                 <div className="flex items-center gap-[2px]">
@@ -101,12 +103,12 @@ const ContactUs = () => {
                   <div className="w-1 h-[2px] bg-primary rounded-[2px]" />
                 </div>
               </div>
-              <p className="font-semibold text-[2rem] leading-[2.75rem] text-black">
+              <p className="font-semibold text-[2rem] leading-[2.75rem] text-black text-center lg:text-left">
                 Feel free to write our logistics services experts
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-10">
+          <div className="flex flex-col lg:grid grid-cols-2 gap-10">
             <Input style="booknow" label="Name" required labelWidth="80px" />
             <Input style="booknow" label="Email" required labelWidth="80px" />
             <Input style="booknow" label="Phone" required labelWidth="80px" />
