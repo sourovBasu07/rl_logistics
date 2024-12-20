@@ -1,6 +1,6 @@
 "use client";
 
-import DashboardStructure from "@/components/DsahboardStructure";
+import DashboardStructure from "@/components/DashboardStructure";
 import Table from "@/components/shared/Table";
 import { ordersData } from "@/data/adminData";
 import { useRouter } from "next/navigation";

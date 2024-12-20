@@ -1,7 +1,7 @@
 "use client";
 
 import { DeleteIcon } from "@/assets";
-import DashboardStructure from "@/components/DsahboardStructure";
+import DashboardStructure from "@/components/DashboardStructure";
 import Table from "@/components/shared/Table";
 import { customerData } from "@/data/adminData";
 

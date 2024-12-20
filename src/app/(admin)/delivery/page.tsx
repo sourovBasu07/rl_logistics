@@ -7,7 +7,7 @@ import {
   QrcodeIcon,
   SearchIcon,
 } from "@/assets";
-import DashboardStructure from "@/components/DsahboardStructure";
+import DashboardStructure from "@/components/DashboardStructure";
 import Button from "@/components/shared/Button";
 import Input from "@/components/shared/Input";
 import {
@@ -150,7 +150,10 @@ const Delivery = () => {
             serial
           />
         </div>
-        <div className="w-max flex items-center gap-2 bg-primary rounded mx-auto px-7 py-3 cursor-pointer" onClick={() => router.push("/qr-results")}>
+        <div
+          className="w-max flex items-center gap-2 bg-primary rounded mx-auto px-7 py-3 cursor-pointer"
+          onClick={() => router.push("/qr-results")}
+        >
           <QrcodeIcon />
           <p className="font-medium text-[2rem] leading-[3rem] text-white">
             Open QR Code

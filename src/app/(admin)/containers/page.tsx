@@ -1,4 +1,4 @@
-import DashboardStructure from "@/components/DsahboardStructure";
+import DashboardStructure from "@/components/DashboardStructure";
 import Button from "@/components/shared/Button";
 import Input from "@/components/shared/Input";
 import {

@@ -1,3 +1,19 @@
+import {
+  BookingIcon,
+  ContainerIcon,
+  CustomerIcon,
+  DashboardIcon,
+  DeliveryIcon,
+  EmployeeIcon,
+  LogoutIcon,
+  MessageIcon,
+  NotificationIcon,
+  OrdersIcon,
+  ReportIcon,
+  SettingsIcon,
+  TrackingIcon,
+} from "@/assets";
+
 export const bookingData = [
   {
     bookingId: "CN241100",
@@ -181,5 +197,79 @@ export const additionalStats = [
     circleTopColor: "",
     circleBackColor: "",
     circleTextColor: "",
+  },
+];
+
+export const servicesNavs = [
+  {
+    title: "Dashboard",
+    url: "/dashboard",
+    Icon: DashboardIcon,
+  },
+  {
+    title: "Tracking",
+    url: "/track-order",
+    Icon: TrackingIcon,
+  },
+  {
+    title: "Booking",
+    url: "/booking",
+    Icon: BookingIcon,
+  },
+  {
+    title: "Containers",
+    url: "/containers",
+    Icon: ContainerIcon,
+  },
+  {
+    title: "All Orders",
+    url: "/orders",
+    Icon: OrdersIcon,
+  },
+  {
+    title: "For Delivery",
+    url: "/delivery",
+    Icon: DeliveryIcon,
+  },
+];
+
+export const informationsNavs = [
+  {
+    title: "Reports",
+    url: "/reports",
+    Icon: ReportIcon,
+  },
+  {
+    title: "Messages",
+    url: "/messages",
+    Icon: MessageIcon,
+  },
+  {
+    title: "Notifications",
+    url: "/notifications",
+    Icon: NotificationIcon,
+  },
+  {
+    title: "Customers",
+    url: "/customers",
+    Icon: CustomerIcon,
+  },
+];
+
+export const settingsNavs = [
+  {
+    title: "All Employee",
+    url: "/employee",
+    Icon: EmployeeIcon,
+  },
+  {
+    title: "Settings",
+    url: "/settings",
+    Icon: SettingsIcon,
+  },
+  {
+    title: "Log Out",
+    url: "/login",
+    Icon: LogoutIcon,
   },
 ];

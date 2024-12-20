@@ -1,6 +1,6 @@
 "use client";
 
-import DashboardStructure from "@/components/DsahboardStructure";
+import DashboardStructure from "@/components/DashboardStructure";
 import { Button } from "@/components/ui/button";
 import {
   Popover,

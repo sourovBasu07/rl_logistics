@@ -35,7 +35,9 @@ export default function RootLayout({
       >
         <SidebarProvider>
           <DashboardSidebar />
-          <main className="w-[calc(100%-300px)] font-outfit">{children}</main>
+          <main className="w-full lg:w-[calc(100%-300px)] font-outfit">
+            {children}
+          </main>
         </SidebarProvider>
       </body>
     </html>

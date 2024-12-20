@@ -1,5 +1,5 @@
 import { CheckIcon, DeleteIcon, EditIcon } from "@/assets";
-import DashboardStructure from "@/components/DsahboardStructure";
+import DashboardStructure from "@/components/DashboardStructure";
 import Table from "@/components/shared/Table";
 import { containersData } from "@/data/adminData";
 import {

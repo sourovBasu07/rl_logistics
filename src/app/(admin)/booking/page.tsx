@@ -1,5 +1,5 @@
 import { EditIcon } from "@/assets";
-import DashboardStructure from "@/components/DsahboardStructure";
+import DashboardStructure from "@/components/DashboardStructure";
 // import { TableDemo } from "@/components/shared/CustomTable";
 import Table from "@/components/shared/Table";
 import { bookingData } from "@/data/adminData";

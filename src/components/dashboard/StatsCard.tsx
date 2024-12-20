@@ -21,7 +21,7 @@ const StatsCard = ({
 }) => {
   if (type === "withoutImage") {
     return (
-      <div className="w-[172px] h-[158px] flex flex-col justify-between bg-[#369FFF] bg-opacity-10 rounded-[1.25rem] px-6 py-8">
+      <div className="w-full h-[158px] flex flex-col justify-between bg-[#369FFF] bg-opacity-10 rounded-[1.25rem] px-6 py-8">
         <p className="font-semibold text-xl text-[#696969]">{title}</p>
         <div className="flex justify-between items-center">
           <div className="w-[.3125rem] h-[1.875rem] bg-[#006ED3]" />
@@ -34,10 +34,10 @@ const StatsCard = ({
   }
   return (
     <div
-      className={`w-[287px] flex justify-between items-end ${className} rounded-[1.25rem] px-[1.875rem] py-[1.875rem] font-semibold text-xl`}
+      className={`w-full lg:w-[287px] flex justify-between items-end ${className} rounded-[1.25rem] px-[1.875rem] py-[1.875rem] font-semibold text-xl`}
     >
       <div className="flex flex-col gap-2">
-        <p className="">{title}</p>
+        <p className="text-sm whitespace-nowrap">{title}</p>
         <CircularProgress {...rest} />
       </div>
       {image && (
@@ -47,7 +47,7 @@ const StatsCard = ({
           width={0}
           height={0}
           sizes="100vw"
-          className="w-auto h-[75px] object-cover"
+          className="w-auto h-[38px] lg:h-[75px] object-cover"
         />
       )}
     </div>

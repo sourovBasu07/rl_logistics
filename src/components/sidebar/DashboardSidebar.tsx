@@ -18,6 +18,7 @@ import {
   DashboardIcon,
   DeliveryIcon,
   EmployeeIcon,
+  LogoutIcon,
   MessageIcon,
   NotificationIcon,
   OrdersIcon,
@@ -85,6 +86,11 @@ const items = [
     url: "/settings",
     icon: SettingsIcon,
   },
+  {
+    title: "Log Out",
+    url: "/login",
+    icon: LogoutIcon,
+  },
 ];
 
 const DashboardSidebar = () => {
@@ -93,16 +99,21 @@ const DashboardSidebar = () => {
   console.log(pathname);
 
   return (
-    <Sidebar collapsible="none" className="h-screen bg-white overflow-scroll">
+    <Sidebar
+      collapsible="none"
+      className="hidden lg:block h-screen bg-white overflow-scroll"
+    >
       <SidebarContent>
-        <Image
-          src="/images/logo.png"
-          alt="logo"
-          width={0}
-          height={0}
-          sizes="100vw"
-          className="w-[218px] h-10 mt-10 pl-7"
-        />
+        <Link href="/">
+          <Image
+            src="/images/logo.png"
+            alt="logo"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-[218px] h-10 mt-10 pl-7"
+          />
+        </Link>
         <SidebarGroup>
           <SidebarGroupLabel className="pt-7"></SidebarGroupLabel>
           <SidebarGroupContent>
@@ -150,6 +161,44 @@ const DashboardSidebar = () => {
                     </SidebarMenuItem>
                   );
                 }
+
+                if (item.title === "Log Out") {
+                  return (
+                    <SidebarMenuItem
+                      key={item.title}
+                      className={`w-[218px] flex items-center rounded-lg mt-10 ${
+                        pathname === item.url ? "bg-[#FCDFE1] text-primary" : ""
+                      } p-3`}
+                    >
+                      <SidebarMenuButton asChild className="">
+                        <Link
+                          href={item.url}
+                          className={`flex items-center gap-3 `}
+                        >
+                          <div className="">
+                            <item.icon
+                              className={`w-6 h-auto ${
+                                pathname === item.url
+                                  ? "stroke-primary"
+                                  : "stroke-[#0F0F0F]"
+                              }`}
+                            />
+                          </div>
+                          <p
+                            className={`font-medium text-base ${
+                              pathname === item.url
+                                ? "text-primary"
+                                : "text-[#0F0F0F]"
+                            }`}
+                          >
+                            {item.title}
+                          </p>
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  );
+                }
+
                 return (
                   <SidebarMenuItem
                     key={item.title}
