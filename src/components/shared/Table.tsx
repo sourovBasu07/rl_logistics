@@ -3,7 +3,7 @@
 import React, { ElementType, ReactNode } from "react";
 import TablePagination, { PaginationType } from "./TablePagination";
 // import { bookingData } from "@/data/adminData";
-import { ArrowDownUp } from "lucide-react";
+// import { ArrowDownUp } from "lucide-react";
 import { v4 as uuidV4 } from "uuid";
 
 // type BookingDataType = (typeof bookingData)[0];
@@ -30,6 +30,7 @@ type TableProps<T> = {
   config: {
     name: string;
     key: keyof T;
+    visibleForMobile: boolean;
     value?: string;
     onClick?: (item: T) => void;
     modify?: (value: string) => string;
@@ -67,43 +68,47 @@ export const Table = <T,>({
       <div className="w-full overflow-x-auto scrollbar">
         <table className="w-full table-auto">
           <thead className="min-w-full bg-primary">
-            <tr className="w-full bg-primary px-3 py-4 text-lg text-white text-center">
+            <tr className="w-full bg-primary px-3 py-3 lg:py-4 text-[.625rem] lg:text-lg text-white text-center">
               {serial && data.length > 0 && (
-                <th className="text-center px-4">
+                <th className="hidden lg:table-cell text-center px-4">
                   <div className="flex justify-center gap-1 items-center font-medium">
                     <p>Sl.</p>
-                    <ArrowDownUp size={16} />
+                    {/* <ArrowDownUp size={16} /> */}
                   </div>
                 </th>
               )}
-              {config.map((column) => (
+              {config.map(({ name, visibleForMobile }) => (
                 <th
                   key={uuidV4()}
-                  className="bg-primary p-4 font-medium text-center whitespace-nowrap"
+                  className={`bg-primary px-4 py-3 lg:py-4 font-medium text-center whitespace-nowrap ${
+                    visibleForMobile ? "" : "hidden lg:table-cell"
+                  }`}
                 >
                   <div className="">
-                    <p>{column.name}</p>
+                    <p>{name}</p>
                   </div>
                 </th>
               ))}
               {actions.length > 0 ? (
-                <th className="text-center px-4 min-w-[2rem]">Actions</th>
+                <th className="text-xs lg:text-base text-center px-4">
+                  Actions
+                </th>
               ) : (
                 <></>
               )}
             </tr>
           </thead>
           <tbody className="">
-            <tr className="w-full h-10 border-b border-b-primary text-center"></tr>
+            <tr className="w-full h-0 lg:h-10 border-b border-b-primary text-center"></tr>
             {data.length > 0 &&
               data.map((item, index) => (
                 <tr
                   key={uuidV4()}
-                  className="px-3 border-b border-b-primary space-x-3 hover:bg-[#D8E7FF]"
+                  className="px-3 lg:border-b border-b-primary space-x-3 hover:bg-[#D8E7FF]"
                 >
                   {serial && data.length > 0 && (
                     <td
-                      className={`px-4 text-center text-lg text-neutralBlack`}
+                      className={`hidden lg:table-cell px-4 text-center text-[.625rem] lg:text-lg text-neutralBlack`}
                     >
                       {serialArr[index] ? serialArr[index] : index + 1}
                     </td>
@@ -115,16 +120,21 @@ export const Table = <T,>({
                       onClick = () => {},
                       modify = () => undefined,
                       Comp,
+                      visibleForMobile,
                     }) => {
+                      const visibilityClass = visibleForMobile
+                        ? ""
+                        : "hidden md:table-cell";
+
                       if (Comp)
                         return (
-                          <td key={key.toString()}>
+                          <td key={key.toString()} className={visibilityClass}>
                             <Comp data={item} />
                           </td>
                         );
                       if (item[key] === "") {
                         return (
-                          <td key={key.toString()}>
+                          <td key={key.toString()} className={visibilityClass}>
                             <p className="text-center text-neutralBlack">-</p>
                           </td>
                         );
@@ -133,14 +143,16 @@ export const Table = <T,>({
                         <td
                           onClick={() => onClick && onClick(item)}
                           key={key.toString()}
-                          className={`py-4 text-lg text-neutralBlack ${
+                          className={`${visibilityClass} py-4 text-[10px] lg:text-lg text-neutralBlack ${
                             key === "message"
-                              ? "max-w-[350px] text-left whitespace-normal"
+                              ? "max-w-[100px] lg:max-w-[350px] text-left whitespace-normal"
                               : "text-center whitespace-nowrap"
                           }`}
                         >
-                          {modify?.(String(value || item[key])) ??
-                            String(value || item[key])}
+                          <p className="clamp-2">
+                            {modify?.(String(value || item[key])) ??
+                              String(value || item[key])}
+                          </p>
                         </td>
                       );
                     }
@@ -153,18 +165,31 @@ export const Table = <T,>({
                         {actions.map(({ name, Icon, onClick, className }) =>
                           Icon ? (
                             <div
-                              className="cursor-pointer"
+                              className="hidden lg:block cursor-pointer"
                               key={name}
                               onClick={() => onClick && onClick(name, item)}
                             >
                               {Icon}
                             </div>
                           ) : (
-                            <p key={name} className={className}>
+                            <p
+                              key={name}
+                              className={className}
+                              onClick={() => onClick && onClick(name, item)}
+                            >
                               {name}
                             </p>
                           )
                         )}
+                        {actions.map(({ name, onClick, className }) => (
+                          <p
+                            key={name}
+                            className={`bg-primary rounded-[2px] text-white px-3 py-1 text-[.625rem] cursor-pointer ${className}`}
+                            onClick={() => onClick && onClick(name, item)}
+                          >
+                            {name}
+                          </p>
+                        ))}
                       </div>
                     </td>
                   ) : (

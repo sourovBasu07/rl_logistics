@@ -4,15 +4,23 @@ import { notificationsData } from "@/data/adminData";
 
 const page = () => {
   const config = [
-    { key: "containerId", name: "Container ID" },
-    { key: "currentProductLocation", name: "Current Product Location" },
-    { key: "updatedBy", name: "Updated By" },
-    { key: "updateTime", name: "Update Time" },
-  ] as { key: keyof (typeof notificationsData)[0]; name: string }[];
+    { key: "containerId", name: "Container ID", visibleForMobile: true },
+    {
+      key: "currentProductLocation",
+      name: "Product Location",
+      visibleForMobile: true,
+    },
+    { key: "updatedBy", name: "Updated By", visibleForMobile: false },
+    { key: "updateTime", name: "Update Time", visibleForMobile: true },
+  ] as {
+    key: keyof (typeof notificationsData)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[];
 
   const actions = [
     {
-      name: "Checkbox",
+      name: "Done",
       Icon: (
         <input
           type="checkbox"

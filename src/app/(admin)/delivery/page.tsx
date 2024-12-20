@@ -25,15 +25,27 @@ import { useRouter } from "next/navigation";
 const Delivery = () => {
   const router = useRouter();
   const config = [
-    { key: "containerId", name: "Container ID" },
-    { key: "currentProductLocation", name: "Current Product Location" },
-    { key: "updatedBy", name: "Updated By" },
-    { key: "empContactNumber", name: "Emp Contact Number" },
-  ] as { key: keyof (typeof containersData)[0]; name: string }[];
+    { key: "containerId", name: "Container ID", visibleForMobile: true },
+    {
+      key: "currentProductLocation",
+      name: "Product Location",
+      visibleForMobile: true,
+    },
+    { key: "updatedBy", name: "Updated By", visibleForMobile: true },
+    {
+      key: "empContactNumber",
+      name: "Emp Contact Number",
+      visibleForMobile: false,
+    },
+  ] as {
+    key: keyof (typeof containersData)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[];
 
   const actions = [
     {
-      name: "Email",
+      name: "Message",
       Icon: (
         <Dialog>
           <DialogTrigger>
@@ -62,16 +74,32 @@ const Delivery = () => {
   ];
 
   const deliveryConfig = [
-    { key: "bookingId", name: "Booking Id" },
-    { key: "containerId", name: "Container Id" },
-    { key: "bookingDate", name: "Booking Date" },
-    { key: "senderCountry", name: "Sender Country" },
-    { key: "receiverCountry", name: "Receiver Country" },
-    { key: "deliveryDate", name: "Delivery Date" },
-    { key: "productLocation", name: "Product Location" },
-    { key: "updatedBy", name: "Updated By" },
-    { key: "receiverContactNumber", name: "Receiver Contact No." },
-  ] as { key: keyof (typeof deliveryData)[0]; name: string }[]; // Type Assertion
+    { key: "bookingId", name: "Booking Id", visibleForMobile: true },
+    { key: "containerId", name: "Container Id", visibleForMobile: true },
+    { key: "bookingDate", name: "Booking Date", visibleForMobile: false },
+    { key: "senderCountry", name: "Sender Country", visibleForMobile: false },
+    {
+      key: "receiverCountry",
+      name: "Receiver Country",
+      visibleForMobile: false,
+    },
+    { key: "deliveryDate", name: "Delivery Date", visibleForMobile: false },
+    {
+      key: "productLocation",
+      name: "Product Location",
+      visibleForMobile: true,
+    },
+    { key: "updatedBy", name: "Updated By", visibleForMobile: false },
+    {
+      key: "receiverContactNumber",
+      name: "Receiver Contact No.",
+      visibleForMobile: false,
+    },
+  ] as {
+    key: keyof (typeof deliveryData)[0];
+    name: string;
+    visibleForMobile: true;
+  }[]; // Type Assertion
 
   const deliveryActions = [
     {
@@ -96,7 +124,7 @@ const Delivery = () => {
           <div className="w-full flex justify-end items-center gap-[.875rem]">
             <Dialog>
               <DialogTrigger asChild>
-                <div className="bg-primary rounded px-4 py-3 cursor-pointer">
+                <div className="bg-primary rounded px-2 lg:px-4 py-[.625rem] lg:py-3 cursor-pointer">
                   <Filtericon />
                 </div>
               </DialogTrigger>
@@ -105,14 +133,16 @@ const Delivery = () => {
                   <DialogTitle hidden>Edit profile</DialogTitle>
                 </DialogHeader>
                 <div className="">
-                  <p className="font-medium text-[2rem] text-neutralBlack">
+                  <p className="font-medium text-sm lg:text-[2rem] text-neutralBlack">
                     Filter your data
                   </p>
-                  <div className="w-full h-[1px] bg-[#57595C] mt-4 mb-8" />
+                  <div className="w-full h-[1px] bg-[#57595C] mt-4 lg:mb-8" />
                 </div>
-                <DateFilter />
+                <div className="">
+                  <DateFilter />
+                </div>
                 <div className="w-full flex justify-end">
-                  <Button text="Filter Now" className="my-16" />
+                  <Button text="Filter Now" className="mt-7 mb-4 lg:my-16" />
                 </div>
               </DialogContent>
             </Dialog>
@@ -151,7 +181,7 @@ const Delivery = () => {
           />
         </div>
         <div
-          className="w-max flex items-center gap-2 bg-primary rounded mx-auto px-7 py-3 cursor-pointer"
+          className="w-max hidden lg:flex items-center gap-2 bg-primary rounded mx-auto px-7 py-3 cursor-pointer"
           onClick={() => router.push("/qr-results")}
         >
           <QrcodeIcon />

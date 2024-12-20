@@ -21,7 +21,7 @@ const styles = {
 };
 
 const sizes = {
-  base: "px-7 py-3 rounded",
+  base: "px-3 lg:px-7 py-[.375rem] lg:py-3 rounded",
   sm: "px-[0.625rem] py-[0.3rem] rounded",
   medium: "rounded px-4 py-2 text-lg",
 };

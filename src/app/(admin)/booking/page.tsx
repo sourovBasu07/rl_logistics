@@ -6,16 +6,32 @@ import { bookingData } from "@/data/adminData";
 
 const page = () => {
   const config = [
-    { key: "bookingId", name: "Booking Id" },
-    { key: "containerId", name: "Container Id" },
-    { key: "bookingDate", name: "Booking Date" },
-    { key: "senderCountry", name: "Sender Country" },
-    { key: "receiverCountry", name: "Receiver Country" },
-    { key: "deliveryDate", name: "Delivery Date" },
-    { key: "productLocation", name: "Product Location" },
-    { key: "status", name: "Status" },
-    { key: "senderContactNumber", name: "Sender Contact No." },
-  ] as { key: keyof (typeof bookingData)[0]; name: string }[]; // Type Assertion
+    { key: "bookingId", name: "Booking Id", visibleForMobile: true },
+    { key: "containerId", name: "Container Id", visibleForMobile: false },
+    { key: "bookingDate", name: "Booking Date", visibleForMobile: false },
+    { key: "senderCountry", name: "Sender Country", visibleForMobile: false },
+    {
+      key: "receiverCountry",
+      name: "Receiver Country",
+      visibleForMobile: false,
+    },
+    { key: "deliveryDate", name: "Delivery Date", visibleForMobile: false },
+    {
+      key: "productLocation",
+      name: "Product Location",
+      visibleForMobile: true,
+    },
+    { key: "status", name: "Status", visibleForMobile: true },
+    {
+      key: "senderContactNumber",
+      name: "Sender Contact No.",
+      visibleForMobile: false,
+    },
+  ] as {
+    key: keyof (typeof bookingData)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[]; // Type Assertion
 
   const actions = [
     {

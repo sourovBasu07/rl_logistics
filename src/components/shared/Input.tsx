@@ -79,7 +79,7 @@ const Input = ({
         onClick={() => iconInputRef?.current?.focus()}
       >
         <div
-          className={`w-full relative flex items-center gap-3 bg-white/80 px-[.875rem] py-[.625rem]`}
+          className={`w-full relative flex items-center gap-3 bg-white/80 px-[.625rem] lg:px-[.875rem] py-1 lg:py-[.625rem]`}
         >
           {Icon && Icon}
 

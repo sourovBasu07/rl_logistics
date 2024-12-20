@@ -15,7 +15,7 @@ const DateFilter = () => {
   const [toDate, setToDate] = useState<Date>();
 
   return (
-    <div className="w-full max-w-[1050px] grid grid-cols-2 gap-x-[150px] gap-y-6">
+    <div className="w-full max-w-[1050px] grid grid-cols-2 gap-x-5 lg:gap-x-[150px] gap-y-5 lg:gap-y-6">
       <div className="flex flex-col gap-3 pt-[.625rem] border-b border-b-borderColor">
         <p className="font-medium text-lg text-[#2C2C2C]">From</p>
         <Popover>
@@ -64,10 +64,7 @@ const DateFilter = () => {
               <CalendarIcon color="#808080" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent
-            className="w-auto bg-dashboardBg z-10 p-0"
-            align="start"
-          >
+          <PopoverContent className="w-auto bg-dashboardBg p-0" align="start">
             <Calendar
               mode="single"
               selected={toDate}

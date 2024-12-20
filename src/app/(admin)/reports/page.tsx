@@ -23,20 +23,28 @@ const Reports = () => {
     {
       key: "totalDelivered",
       name: "Total Delivered",
+      visibleForMobile: true,
     },
     {
       key: "totalPending",
       name: "Total Pending",
+      visibleForMobile: true,
     },
     {
       key: "totalRejected",
       name: "Total rejected",
+      visibleForMobile: true,
     },
     {
       key: "revenue",
       name: "Revenue",
+      visibleForMobile: true,
     },
-  ] as { key: keyof (typeof reportsData)[0]; name: string }[];
+  ] as {
+    key: keyof (typeof reportsData)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[];
 
   return (
     <DashboardStructure title="Reports" label="Reports">

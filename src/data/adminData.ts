@@ -26,6 +26,17 @@ export const bookingData = [
     status: "Pending",
     senderContactNumber: "+8801330000121",
   },
+  {
+    bookingId: "CN241100",
+    containerId: "",
+    bookingDate: "10-11-2024",
+    senderCountry: "China",
+    receiverCountry: "Bangladesh",
+    deliveryDate: "25-11-2024",
+    productLocation: "House 1, Beijing, China ",
+    status: "Pending",
+    senderContactNumber: "+8801330000121",
+  },
 ];
 
 export const ordersData = [
@@ -290,6 +301,6 @@ export const notificationsData = [
     containerId: "L0001",
     currentProductLocation: "China Airport",
     updatedBy: "Md Irfan Ahmad",
-    updatedTime: "12:30",
+    updateTime: "12:30",
   },
 ];

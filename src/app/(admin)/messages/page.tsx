@@ -9,12 +9,14 @@ const page = () => {
     {
       key: "name",
       name: "Name",
+      visibleForMobile: false,
     },
-    { key: "email", name: "Email Address" },
-    { key: "phone", name: "Phone Number" },
+    { key: "email", name: "Email Address", visibleForMobile: true },
+    { key: "phone", name: "Phone Number", visibleForMobile: true },
     {
       key: "subject",
       name: "Subject",
+      visibleForMobile: false,
       modify: (data: string) => {
         return (
           <p className="max-w-[150px] text-left whitespace-normal">{data}</p>
@@ -24,12 +26,17 @@ const page = () => {
     {
       key: "message",
       name: "Message",
+      visibleForMobile: true,
     },
-  ] as { key: keyof (typeof messagesData)[0]; name: string }[];
+  ] as {
+    key: keyof (typeof messagesData)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[];
 
   const actions = [
     {
-      name: "Checkbox",
+      name: "View",
       Icon: (
         <input
           type="checkbox"
