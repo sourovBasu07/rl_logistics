@@ -19,20 +19,28 @@ import Image from "next/image";
 
 const page = () => {
   const additionalConfig = [
-    { key: "totalFreight", name: "Total Freight" },
-    { key: "containerId", name: "Container ID" },
-    { key: "bookingId", name: "Location" },
-    { key: "paymentStatus", name: "Payment Status" },
-  ] as { key: keyof (typeof additionalInfo)[0]; name: string }[];
+    { key: "totalFreight", name: "Total Freight", visibleForMobile: true },
+    { key: "containerId", name: "Container ID", visibleForMobile: true },
+    { key: "bookingId", name: "Location", visibleForMobile: true },
+    { key: "paymentStatus", name: "Payment Status", visibleForMobile: true },
+  ] as {
+    key: keyof (typeof additionalInfo)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[];
 
   const trackingConfig = [
-    { key: "date", name: "Date" },
-    { key: "time", name: "Time" },
-    { key: "location", name: "Updated By" },
-    { key: "status", name: "Status" },
-    { key: "updatedBy", name: "Updated By" },
-    { key: "remarks", name: "Remarks" },
-  ] as { key: keyof (typeof trackingInfo)[0]; name: string }[];
+    { key: "date", name: "Date", visibleForMobile: true },
+    { key: "time", name: "Time", visibleForMobile: true },
+    { key: "location", name: "Updated By", visibleForMobile: true },
+    { key: "status", name: "Status", visibleForMobile: true },
+    { key: "updatedBy", name: "Updated By", visibleForMobile: true },
+    { key: "remarks", name: "Remarks", visibleForMobile: false },
+  ] as {
+    key: keyof (typeof trackingInfo)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[];
 
   return (
     <div className="flex flex-col py-14 px-[3.75rem]">
