@@ -7,6 +7,13 @@ import Button from "@/components/shared/Button";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { MenuIcon } from "@/assets";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -116,22 +123,59 @@ const Navbar = () => {
 
           {/* Right Section */}
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2 border border-primary rounded px-2 py-1">
-              <Image
-                src="/icons/nav_icon.png"
-                alt="nav icon"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-[1.875rem] h-[1.875rem] object-cover"
-              />
-              <Image
-                src="/icons/arrow_down_icon.png"
-                alt="arrow down"
-                width={10}
-                height={15}
-              />
-            </div>
+            <Select>
+              <SelectTrigger className="">
+                <div className="flex items-center gap-2 border border-primary rounded px-2 py-1">
+                  <Image
+                    src="/images/cn_flag.svg"
+                    alt="nav icon"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-[1.875rem] h-[1.875rem] object-cover"
+                  />
+                  <Image
+                    src="/icons/arrow_down_icon.png"
+                    alt="arrow down"
+                    width={10}
+                    height={15}
+                  />
+                </div>
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="china">
+                  <Image
+                    src="/images/cn_flag.svg"
+                    alt="nav icon"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-[1.875rem] h-[1.875rem] object-cover"
+                  />
+                </SelectItem>
+                <SelectItem value="bd">
+                  <Image
+                    src="/images/bd_flag.svg"
+                    alt="nav icon"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-[1.875rem] h-[1.875rem] object-cover"
+                  />
+                </SelectItem>
+                <SelectItem value="wirehouse controller">
+                  <Image
+                    src="/images/us_flag.svg"
+                    alt="nav icon"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-[1.875rem] h-[1.875rem] object-cover"
+                  />
+                </SelectItem>
+              </SelectContent>
+            </Select>
+
             <Link href="/book-now">
               <Button style="outline" text="Book Now" />
             </Link>
