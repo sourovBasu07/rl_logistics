@@ -12,8 +12,13 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
 } from "@/components/ui/select";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -201,12 +206,38 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <Image
-            src="/icons/user_circle_icon.svg"
-            alt="Logo"
-            width={28}
-            height={28}
-          />
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <Image
+                src="/icons/user_circle_icon.svg"
+                alt="Logo"
+                width={28}
+                height={28}
+              />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>
+                <Link href="/login">
+                  <Button
+                    style="outline"
+                    size="sm"
+                    text="User Login"
+                    icon="/icons/user_icon.svg"
+                  />
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/admin">
+                  <Button
+                    style="secondary"
+                    size="sm"
+                    text="Admin Login"
+                    icon="/icons/user_circle_icon.svg"
+                  />
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
         {isActive && (
           <div className="fixed left-0 top-[4.5rem] w-screen h-[calc(100%-55px)] flex flex-col bg-white mt-12 pb-4 px-8 z-10">
