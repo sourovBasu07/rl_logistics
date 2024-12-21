@@ -17,16 +17,32 @@ const QrResults = () => {
   const router = useRouter();
 
   const deliveryConfig = [
-    { key: "bookingId", name: "Booking Id" },
-    { key: "containerId", name: "Container Id" },
-    { key: "bookingDate", name: "Booking Date" },
-    { key: "senderCountry", name: "Sender Country" },
-    { key: "receiverCountry", name: "Receiver Country" },
-    { key: "deliveryDate", name: "Delivery Date" },
-    { key: "productLocation", name: "Product Location" },
-    { key: "updatedBy", name: "Updated By" },
-    { key: "receiverContactNumber", name: "Receiver Contact No." },
-  ] as { key: keyof (typeof deliveryData)[0]; name: string }[]; // Type Assertion
+    { key: "bookingId", name: "Booking Id", visibleForMobile: true },
+    { key: "containerId", name: "Container Id", visibleForMobile: true },
+    { key: "bookingDate", name: "Booking Date", visibleForMobile: false },
+    { key: "senderCountry", name: "Sender Country", visibleForMobile: false },
+    {
+      key: "receiverCountry",
+      name: "Receiver Country",
+      visibleForMobile: false,
+    },
+    { key: "deliveryDate", name: "Delivery Date", visibleForMobile: false },
+    {
+      key: "productLocation",
+      name: "Product Location",
+      visibleForMobile: true,
+    },
+    { key: "updatedBy", name: "Updated By", visibleForMobile: false },
+    {
+      key: "receiverContactNumber",
+      name: "Receiver Contact No.",
+      visibleForMobile: false,
+    },
+  ] as {
+    key: keyof (typeof deliveryData)[0];
+    name: string;
+    visibleForMobile: true;
+  }[]; // Type Assertion
 
   const deliveryActions = [
     {
