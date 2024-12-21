@@ -1,3 +1,5 @@
+"use client";
+
 import { CheckIcon, DeleteIcon, EditIcon } from "@/assets";
 import DashboardStructure from "@/components/DashboardStructure";
 import Table from "@/components/shared/Table";
@@ -20,11 +22,23 @@ import Button from "@/components/shared/Button";
 
 const page = () => {
   const config = [
-    { key: "containerId", name: "Container ID" },
-    { key: "currentProductLocation", name: "Current Product Location" },
-    { key: "updatedBy", name: "Updated By" },
-    { key: "empContactNumber", name: "Emp Contact Number" },
-  ] as { key: keyof (typeof containersData)[0]; name: string }[];
+    { key: "containerId", name: "Container ID", visibleForMobile: true },
+    {
+      key: "currentProductLocation",
+      name: "Product Location",
+      visibleForMobile: true,
+    },
+    { key: "updatedBy", name: "Updated By", visibleForMobile: true },
+    {
+      key: "empContactNumber",
+      name: "Emp Contact Number",
+      visibleForMobile: false,
+    },
+  ] as {
+    key: keyof (typeof containersData)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[];
 
   const actions = [
     {
@@ -67,7 +81,7 @@ const page = () => {
       ),
     },
     {
-      name: "Delete",
+      name: "Remove",
       Icon: (
         <Dialog>
           <DialogTrigger asChild>

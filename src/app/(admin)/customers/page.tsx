@@ -7,18 +7,19 @@ import { customerData } from "@/data/adminData";
 
 const page = () => {
   const config = [
-    { key: "userName", name: "User Name" },
-    { key: "emailPhone", name: "Email/Phone" },
+    { key: "userName", name: "User Name", visibleForMobile: true },
+    { key: "emailPhone", name: "Email/Phone", visibleForMobile: true },
     {
       key: "status",
       name: "Status",
+      visibleForMobile: true,
       modify: (data: string) => {
         return (
           <p
             className={`w-max mx-auto rounded text-lg px-4 py-1 ${
               data === "Online"
-                ? "border border-[#09FF00] text-[#00FF2F]"
-                : "border border-primary text-primary"
+                ? "lg:border border-[#09FF00] text-[#00FF2F]"
+                : "lg:border border-primary text-primary"
             }`}
           >
             {data}
@@ -26,7 +27,11 @@ const page = () => {
         );
       },
     },
-  ] as { key: keyof (typeof customerData)[0]; name: string }[];
+  ] as {
+    key: keyof (typeof customerData)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[];
 
   const actions = [
     {

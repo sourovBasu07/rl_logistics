@@ -80,9 +80,11 @@ export const Table = <T,>({
               {config.map(({ name, visibleForMobile }) => (
                 <th
                   key={uuidV4()}
-                  className={`bg-primary px-4 py-3 lg:py-4 font-medium text-center whitespace-nowrap ${
-                    visibleForMobile ? "" : "hidden lg:table-cell"
-                  }`}
+                  className={`bg-primary px-4 py-3 lg:py-4 font-medium text-center ${
+                    name.length > 20
+                      ? "whitespace-normal lg:whitespace-nowrap"
+                      : "whitespace-nowrap "
+                  } ${visibleForMobile ? "" : "hidden lg:table-cell"}`}
                 >
                   <div className="">
                     <p>{name}</p>
@@ -159,9 +161,9 @@ export const Table = <T,>({
                   )}
                   {actions.length > 0 ? (
                     <td
-                      className={`min-w-[2rem] text-center px-4 text-sm leading-5`}
+                      className={`text-center px-1 lg:px-4 text-sm leading-5`}
                     >
-                      <div className="flex justify-center items-center gap-4">
+                      <div className="flex justify-center items-center gap-2 lg:gap-4">
                         {actions.map(({ name, Icon, onClick, className }) =>
                           Icon ? (
                             <div
@@ -184,7 +186,7 @@ export const Table = <T,>({
                         {actions.map(({ name, onClick, className }) => (
                           <p
                             key={name}
-                            className={`bg-primary rounded-[2px] text-white px-3 py-1 text-[.625rem] cursor-pointer ${className}`}
+                            className={`block lg:hidden bg-primary rounded-[2px] text-white px-2 py-1 text-[.625rem] cursor-pointer ${className}`}
                             onClick={() => onClick && onClick(name, item)}
                           >
                             {name}
