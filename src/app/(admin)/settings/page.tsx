@@ -14,14 +14,18 @@ import EmployeeForm from "@/components/forms/EmployeeForm";
 
 const page = () => {
   const config = [
-    { key: "empName", name: "Emp Name" },
-    { key: "phone", name: "Phone" },
-    { key: "country", name: "Country" },
-  ] as { key: keyof (typeof settingsData)[0]; name: string }[];
+    { key: "empName", name: "Emp Name", visibleForMobile: true },
+    { key: "phone", name: "Phone", visibleForMobile: true },
+    { key: "country", name: "Country", visibleForMobile: true },
+  ] as {
+    key: keyof (typeof settingsData)[0];
+    name: string;
+    visibleForMobile: boolean;
+  }[];
 
   const actions = [
     {
-      name: "Delete",
+      name: "Remove",
       Icon: (
         <Dialog>
           <DialogTrigger asChild>
